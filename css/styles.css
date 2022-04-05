@@ -1,3 +1,9 @@
+/* #region General */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -12,7 +18,29 @@ header {
     overflow: hidden;
 }
 
-/* Navbar */
+h1 {
+    font-size: clamp(1rem, 9vw, 20rem);
+    color: var(--clr-title);
+    line-height: 1.1;
+}
+
+p {
+    color: var(--clr-text);
+    font-weight: 350;
+}
+
+.content,
+main > section {
+    padding: 1em 1em 0 1em;
+}
+
+mark {
+    background-color: var(--clr-accent);
+}
+
+/* #endregion */
+
+/* #region Navbar */
 
 .navbar {
     align-self: baseline;
@@ -20,6 +48,15 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: fixed;
+    z-index: 9999;
+    transition: 0.6s;
+}
+
+.fixed {
+    background: var(--clr-white);
+    padding: .5rem;
+    box-shadow: 0 0 1rem var(--clr-shadow);
 }
 
 div.logo {
@@ -84,10 +121,12 @@ img.logo {
     width: 100%;
 }
 
-/* Home */
+/* #endregion */
+
+/* #region Home */
 
 .content {
-    padding: 1em 1em 0 1em;
+    padding: 7em 1em 0 1em;
     position: relative;
     flex-grow: 1;
 }
@@ -100,17 +139,12 @@ img.logo {
 }
 
 .content__title h1 {
-    font-size: clamp(1rem, 9vw, 20rem);
-    color: var(--clr-title);
-    line-height: 1.1;
     max-width: 10ch;
     animation: fadeIn 1s;
 }
 
 .content__title p {
     font-size: clamp(.75rem, 7vw, 3rem);
-    color: var(--clr-text);
-    font-weight: 350;
     max-width: 30ch;
 }
 
@@ -130,10 +164,6 @@ img.logo {
 
 .content__profile {
     animation: fadeIn .5s;
-}
-
-.content__title mark {
-    background-color: var(--clr-accent);
 }
 
 .contact__btn {
@@ -175,13 +205,105 @@ img.logo {
     z-index: -2;
 }
 
+.scroll {
+    position: absolute;
+    display: inline-flex;
+    gap: 1rem;
+    bottom: 7rem;
+    right: -6rem;
+    transform: rotateZ(-90deg);
+    align-items: baseline;
+    z-index: -1;
+}
+
+.scroll :nth-child(2) {
+    width: 1rem;
+    height: .15rem;
+    background-color: var(--clr-title);
+}
+
+.scroll :nth-child(3) {
+    width: 5rem;
+    height: .15rem;
+    background-color: var(--clr-title);
+}
+
 .content__strokes {
     opacity: .9;
 }
 
-/* Main */
+/* #endregion */
 
-/* Footer */
+/* #region Main */
+
+main > section,
+.about__content,
+.about__interests {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main > section {
+    padding-top: 3em;
+}
+
+main > section h1 {
+    font-size: clamp(1rem, 9vw, 10rem);
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* #region About */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about h1 {
+    max-width: 11ch;
+}
+
+.about p {
+    font-size: clamp(.75rem, 5vw, 2rem);
+    line-height: 1.125;
+}
+
+main q {
+    font-size: clamp(.5rem, 5vw, 1.75rem);
+    font-style: italic;
+}
+
+.mistake {
+    font-size: clamp(.25rem, 3vw, 1rem);
+    font-style: italic;
+}
+
+.about__interest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.about__interest img {
+    max-width: 10%;
+    align-self: flex-start;
+    padding-top: 2rem;
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Footer */
 
 footer {
     display: inline-flex;
@@ -203,9 +325,12 @@ footer a {
     font-weight: 600;
 }
 
-/* Mobile Fixes */
+/* #endregion */
+
+/* #region Mobile Fixes */
 @media (max-width: 50em) {
     .nav__links {
+        display: none;
         --gap: 2em;
         z-index: 1000;
         position: fixed;
@@ -277,27 +402,55 @@ footer a {
         height: 50%;
     }
 
+    .scroll {
+        left: -6rem;
+        right: auto;
+    }
+
     footer {
         flex-direction: column;
         gap: 1rem;
     }
-}
 
-/* Desktop Fixes */
-@media (min-width: 50em) {
-    .content {
-        padding: 1em 5em 0 5em;
+    footer .design {
+        order: -1;
     }
 }
 
-/* Large Desktop Fixes */
+/* #endregion */
+
+/* #region Desktop Fixes */
+@media (min-width: 50em) {
+    .content {
+        padding: 7em 5em 0 5em;
+    }
+
+    .about h1 {
+        max-width: 100%;
+    }
+
+    .about__content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+}
+
+/* #endregion */
+
+/* #region Large Desktop Fixes */
 @media (min-width: 85em) {
     .content__profile {
         height: 95%;
     }
 }
 
-/* Animations */
+/* #endregion */
+
+/* #region Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -306,3 +459,5 @@ footer a {
         opacity: 1;
     }
 }
+
+/* #endregion */
