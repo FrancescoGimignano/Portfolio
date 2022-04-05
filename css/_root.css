@@ -5,10 +5,8 @@
     --clr-black: hsl(0, 0%, 0%);
     --clr-title: hsl(223, 9%, 15%);
     --clr-text: hsla(223, 9%, 15%, 0.75);
-    --clr-accent: hsla(29, 86%, 50%, 0.749);
-    --clr-accent-full: hsl(29, 86%, 50%);
+    --clr-accent: hsla(29, 76%, 57%);
     --clr-button: hsl(189, 43%, 56%);
-    --clr-button-overlay: hsl(189, 43%, 40%);
     --clr-shadow: hsl(0, 0%, 53%);
 
     --ff-main: 'Montserrat', sans-serif;

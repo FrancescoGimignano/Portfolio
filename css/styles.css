@@ -141,7 +141,7 @@ img.logo {
     align-items: center;
     justify-content: space-between;
     gap: .5em;
-    background-color: var(--clr-accent-full);
+    background-color: var(--clr-accent);
     border: none;
     padding: .5em 1em;
     border-radius: .5em;
@@ -154,7 +154,7 @@ img.logo {
 }
 
 .contact__btn:hover {
-    background-color: var(--clr-button-overlay);
+    background-color: var(--clr-button);
 }
 
 .content__profile {
