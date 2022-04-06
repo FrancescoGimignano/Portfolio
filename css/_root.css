@@ -3,6 +3,7 @@
 :root {
     --clr-white: hsl(0, 0%, 100%);
     --clr-black: hsl(0, 0%, 0%);
+    --clr-card-bg: hsl(0, 0%, 93%);
     --clr-title: hsl(223, 9%, 15%);
     --clr-text: hsla(223, 9%, 15%, 0.75);
     --clr-accent: hsla(29, 76%, 57%);

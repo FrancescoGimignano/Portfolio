@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/_root.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="./js/navbar.js" defer></script>
+    <script src="./js/lazy_loaders.js" defer></script>
+    <script src="./js/sections.js" defer></script>
 </head>
 <body>
     <header>
@@ -62,7 +64,7 @@
                 Let's talk! <img src="./img/chat_bubbles.svg" alt="">
             </button>
             <img src="./img/strokes.svg" alt="Francesco Gimignano" class="content__profile content__strokes">
-            <img loading="lazy" src="./img/profile.svg" alt="Francesco Gimignano" class="content__profile">
+            <img src="./img/profile.svg" alt="Francesco Gimignano" class="content__profile">
             <div class="scroll">
                 <span>Scroll down</span>
                 <span></span>
@@ -90,7 +92,7 @@
                 </p>
                 <div class="about__interests">
                     <div class="about__interest">
-                        <img src="./img/nerd_herd.png" alt="">
+                        <img data-src="./img/nerd_herd.png" alt="">
                         <p>
                             Since I was a kid I've been passionate and curious about computers:<br> 
                             <q>How did a PC work?</q>, <q>How do you make a software?</q>, <q>Why is the motherboard on fire?</q><br><br>
@@ -98,14 +100,14 @@
                             Software Development... <span class="mistake">oh boy, if only I knew...</span>
                         </p>
                     </div>
-                    <div class="about__interest">
+                    <div class="about__interest left">
                         <p>I <strong>love</strong> doing sports of any kind! I currently do weightlifting and boxing, but occasionally play soccer
                             with friends or go for a run on the waterfront. I am always available and eager to try new sports and new ways to stay fit.
                         </p>
-                        <img src="./img/sports.png" alt="">
+                        <img data-src="./img/sports.png" alt="">
                     </div>
                     <div class="about__interest">
-                        <img src="./img/music.png" alt="">
+                        <img data-src="./img/music.png" alt="">
                         <p>I also enjoy a lot of <strong>rock music</strong>, especially live. In fact my nickname comes from Jimi Hendrix, my all time favorite guitarist.</p>
                     </div>
                 </div>
@@ -113,7 +115,7 @@
             
         </section>
         <section id="work" class="work">
-
+            
         </section>
         <section id="skills" class="skills">
 

@@ -101,7 +101,8 @@ img.logo {
 
 .nav__links a:hover,
 .nav__links a:focus,
-.nav__links a:active {
+.nav__links a:active,
+.nav__links a.active {
     color: var(--clr-accent);
 }
 
@@ -267,7 +268,10 @@ main > section h1 {
 }
 
 .about h1 {
+    width: 0;
     max-width: 11ch;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .about p {
@@ -290,13 +294,40 @@ main q {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
+    border-radius: 1em;
+    background-color: var(--clr-card-bg);
+    padding: 1em;
+    box-shadow: 0 0 .5em var(--clr-shadow);
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.about__interest.left {
+    transform: translateX(-100%);
 }
 
 .about__interest img {
     max-width: 10%;
     align-self: flex-start;
-    padding-top: 2rem;
+}
+
+.about__interest [data-src] {
+    min-width: 10%;
+}
+
+.about.active h1 {
+    animation: fill 4s steps(44) 0s 1 normal both
+}
+
+.about.active .about__content {
+    animation: fadeIn 1.5s;
+}
+
+.about.active .about__interest {
+    transition: 1.5s;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* #endregion */
@@ -330,7 +361,6 @@ footer a {
 /* #region Mobile Fixes */
 @media (max-width: 50em) {
     .nav__links {
-        display: none;
         --gap: 2em;
         z-index: 1000;
         position: fixed;
@@ -457,6 +487,15 @@ footer a {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
     }
 }
 
