@@ -6,7 +6,7 @@ const sectionsNavObserver = new IntersectionObserver((entries) => {
         document.querySelector(`.nav__links li a[href='${location}']`).classList.toggle("active", entry.isIntersecting);
     });
 }, {
-    threshold: 1
+    threshold: 0.75
 });
 
 const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {

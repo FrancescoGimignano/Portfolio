@@ -7,8 +7,9 @@
     --clr-title: hsl(223, 9%, 15%);
     --clr-text: hsla(223, 9%, 15%, 0.75);
     --clr-accent: hsla(29, 76%, 57%);
-    --clr-button: hsl(189, 43%, 56%);
+    --clr-button: hsl(189, 43%, 56%); 
     --clr-shadow: hsl(0, 0%, 53%);
+    --clr-dark-cyan: hsl(182, 84%, 24%);
 
     --ff-main: 'Montserrat', sans-serif;
 }
