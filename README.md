@@ -25,9 +25,16 @@ The layout for this portfolio has been heavinly ispired by the [Hendrix Theme fr
 
 The landing page animation has been made using [Typed.JS](https://github.com/mattboldt/typed.js/).
 
+The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with different font weights, and [Kaushan Script](https://
+fonts.google.com/specimen/Kaushan+Script).
+
+The _"about me"_ picture has been shot by [Marinella Parente](https://www.instagram.com/marinella_art/), a really talented artist which I've the pleasure to be friend with 👩🏼‍🎨
+
 All the code and UX has been reviewed by [Vincenzo Coppolecchia](https://www.linkedin.com/in/francesco-gimignano-51884314a/), an amazing Front-End developer which I had the fortune to work with for 2 years on my first work experience 😁
 
 Also big shoutout to [Kevin Powell](https://www.youtube.com/kepowob) and [Gary Simon](https://www.youtube.com/c/DesignCourse) for their amazing YouTube channels, from which I learned and improved many aspects of UX/UI design and coding 🧡
+
+All the other materials not mentioned here are made entirely by me 😄
 
 ## 😁 Conclusion
 
