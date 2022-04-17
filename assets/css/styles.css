@@ -40,7 +40,7 @@ header {
 }
 
 .navbar[data-nav-sticky="true"] .logo {
-    font-size: clamp(1.25rem, 9vw, 8rem);
+    font-size: clamp(1.25rem, 9vw, 4rem);
 }
 
 .navbar[data-nav-sticky="true"] .logo a {
@@ -221,6 +221,36 @@ nav > [data-visible="true"] {
 
 /* #endregion */
 
+/* #region About */
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.about__download {
+    position: relative;
+    color: var(--clr-title);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.about__download:hover {
+    color: var(--clr-accent);
+}
+
+img.profile {
+    max-width: 50%;
+    height: 100%;
+    border: none;
+    border-radius: .25em;
+    box-shadow: 0 0 .5em var(--clr-black);
+}
+
+/* #endregion */
+
 /* #region Footer */
 
 footer {
@@ -237,7 +267,31 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    margin-inline: min(6vw, 25rem);
+    display: flex;
+    padding-block: 5em;
+    justify-content: center;
+}
+
+section > .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    color: var(--clr-text);
+    height: 100%;
+}
+
+.content h2 {
+    font-family: var(--ff-title);
+    color: var(--clr-title);
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    line-height: 1.2;
+}
+
+.content p {
+    font-size: clamp(1.15rem, 2vw, 2rem);
+    font-weight: var(--fw-light);
+    line-height: 1.1;
 }
 
 section#what-i-do,
@@ -246,7 +300,8 @@ section#contacts {
 }
 
 mark {
-    background-color: var(--clr-accent);
+    color: var(--clr-accent);
+    background-color: transparent;
 }
 
 .social {
@@ -324,6 +379,28 @@ mark {
 
     [data-visible="true"] .nav__link {
         font-size: 3rem;
+    }
+
+    /* #endregion */
+
+    /* #region About */
+
+    .about__content {
+        gap: 3rem;
+    }
+
+    img.profile {
+        max-width: 75%;
+        max-height: 75%;
+    }
+
+    /* #endregion */
+
+    /* #region General Styles */
+
+    section > .content {
+        flex-direction: column;
+        align-items: center;
     }
 
     /* #endregion */
