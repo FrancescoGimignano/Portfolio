@@ -1,0 +1,13 @@
+:root {
+    --clr-white: hsl(0deg, 0%, 100%);
+    --clr-black: hsl(0deg, 0%, 0%);
+    --clr-title: hsl(0, 0%, 16%);
+    --clr-text: hsl(0, 2%, 35%);
+    --clr-accent: hsl(11, 63%, 67%);
+    --ff-title: 'Kaushan Script', cursive;
+    --ff-text: 'Poppins', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}

@@ -1,0 +1,36 @@
+/* #region Body */
+
+body {
+    font-family: var(--ff-text);
+}
+
+/* #endregion */
+
+/* #region Header */
+
+header {
+    height: 100vh;
+    padding: 1em 5em;
+    background-image: url("../img/bg.webp");
+    background-color: var(--clr-black);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* #endregion */
+
+/* #region Navbar */
+
+/* #endregion */
+
+/* #region Mobile Fixes */
+
+@media (max-width: 60em) {
+
+    /* #region Navbar */
+
+    /* #endregion */
+}
+
+/* #endregion */
