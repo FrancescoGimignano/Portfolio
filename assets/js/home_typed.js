@@ -1,3 +1,6 @@
+/**
+ * Invoke Typed.Js for Home Page animation
+ */
 new Typed('#title', {
     stringsElement: '#title-values',
     typeSpeed: 50,

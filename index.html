@@ -32,12 +32,15 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="navbar" data-nav-sticky="false">
             <div class="logo">
                 <a href="#">Jimi</a>
             </div>
+            <button type="button" class="nav__btn" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">
+                <span></span><span></span>
+            </button>
             <nav>
-                <ul id="primary-navigation" data-visible="false" class="nav__links invisible">
+                <ul id="primary-navigation" data-visible="false" class="nav__links">
                     <li><a href="#about" class="nav__link">About</a></li>
                     <li><a href="#what-i-do" class="nav__link">What I do</a></li>
                     <li><a href="#my-experience" class="nav__link">My experience</a></li>
@@ -102,10 +105,9 @@
         </div>
     </header>
     <main>
-        <section id="about">
-        </section>
+        <section id="about"></section>
         <section id="what-i-do"></section>
-        <section id="experience"></section>
+        <section id="my-experience"></section>
         <section id="contacts"></section>
     </main>
     <footer>
