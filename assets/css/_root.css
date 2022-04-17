@@ -4,6 +4,7 @@
     --clr-title: hsl(0, 0%, 16%);
     --clr-text: hsl(0, 2%, 35%);
     --clr-accent: hsl(11, 63%, 67%);
+    --clr-section-bg: hsl(0, 0%, 98%);
     --ff-title: 'Kaushan Script', cursive;
     --ff-text: 'Poppins', sans-serif;
     --fw-light: 300;

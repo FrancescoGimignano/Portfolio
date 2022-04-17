@@ -1,26 +1,237 @@
-/* #region Body */
-
-body {
-    font-family: var(--ff-text);
-}
-
-/* #endregion */
-
 /* #region Header */
 
 header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    padding: 1em 5em;
+    color: var(--clr-white);
     background-image: url("../img/bg.webp");
     background-color: var(--clr-black);
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 /* #endregion */
 
 /* #region Navbar */
+
+.navbar {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: clamp(1em, 10vw, 10em);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    color: var(--clr-white);
+}
+
+.logo {
+    font-family: var(--ff-title);
+    font-size: clamp(1.5rem, 10vw, 8.5rem);
+}
+
+.logo a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+.nav__links {
+    display: inline-flex;
+    gap: 2em;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+.nav__link {
+    position: relative;
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav__link::after {
+    content: '';
+    background-color: var(--clr-accent);
+    display: inline-flex;
+    position: absolute;
+    z-index: -1;
+    bottom: 25%;
+    left: 0;
+    width: 0;
+    height: .25rem;
+    transition: width .3s;
+}
+
+.nav__link:hover::after {
+    width: 100%;
+}
+
+/* #endregion */
+
+/* #region Header Content */
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.header__content h1,
+.header__content span {
+    font-size: clamp(1.5rem, 10vw, 10rem);
+}
+
+.header__title {
+    text-align: center;
+    display: inline-flex;
+}
+
+.header__socials {
+    display: inline-flex;
+    align-items: center;
+    gap: 3em;
+    transition: all .5s;
+}
+
+.header__socials svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--clr-white);
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.header__socials svg:hover {
+    width: 2.25em;
+    height: 2.25em;
+    fill: var(--clr-accent);
+}
+
+.header__scroll {
+    margin-bottom: 2em;
+}
+
+.header__scroll svg {
+    width: 6em;
+    height: 6em;
+    fill: none;
+    stroke: var(--clr-white);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
+}
+
+.header__scroll svg path {
+    animation: fade-arrows 2.5s infinite;
+    -webkit-animation: fade-arrows 2.5s infinite; 
+}
+
+.header__scroll svg :first-child {
+    animation-delay:-.25s;
+    -webkit-animation-delay:-.25s;
+}
+  
+.header__scroll svg :last-child {
+    animation-delay:0s;
+    -webkit-animation-delay:0s;
+}
+
+@keyframes fade-arrows {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+}
+
+@-webkit-keyframes fade-arrows {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+}
+
+/* #endregion */
+
+/* #region Footer */
+
+footer {
+    text-align: center;
+    padding: 2em;
+}
+
+/* #endregion */
+
+/* #region General Styles */
+
+body {
+    font-family: var(--ff-text);
+}
+
+section {
+    min-height: 100vh;
+}
+
+section#what-i-do,
+section#contacts {
+    background-color: var(--clr-section-bg);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.social {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
 
 /* #endregion */
 
