@@ -371,6 +371,61 @@ h2.content__title.interests {
 
 /* #endregion */
 
+/* #region Contacts */
+
+#contacts .content {
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+
+.contact__form {
+    width: 70%;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact__form textarea {
+    resize: none;
+}
+
+.contact__form button {
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+}
+
+.contact__form button:hover {
+    color: var(--clr-accent);
+}
+
+.contact__socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.contact__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact__socials a > svg {
+    width: 3em;
+    height: 3em;
+}
+
+/* #endregion */
+
 /* #region Footer */
 
 footer {
@@ -433,11 +488,16 @@ section > .content {
     font-weight: var(--fw-medium);
 }
 
-.content p {
+.content p,
+label {
     font-size: clamp(1.15rem, 2vw, 2rem);
     font-weight: var(--fw-light);
     line-height: 1.1;
     color: var(--clr-text);
+}
+
+label {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 section#what-i-do,

@@ -11,13 +11,7 @@ This portfolio is made using pure HTML5, CSS3 and JavaScript. No frameworks are 
 The idea is to  briefly showcase my work and personal experience, in a way that
 is appealing to the 21st century (since, you know, PDFs are boring 😪)
 
-But, if you **_really_** need a PDF copy of my CV, you can get it by clicking [right here](#).
-
-## 💻 Why hosting on GitHub?
-
-I choose to host this project on GitHub not only because it's free (although is a valid point 😅) but mostly because I like open source development and I host most of my projects here. 
-
-Also, since I'm showcasing the recent ones in the portfolio as well, I thought it was a good choice to keep everything consistent and host the protfolio here as well.
+But, if you **_really_** need a PDF copy of my CV, you can get it by clicking [right here](https://drive.google.com/file/d/1dll2aEc7FSmz8LFQYWE8T2pXzzcYqExz/view?usp=sharing).
 
 ## 🙏🏼 Credits
 
