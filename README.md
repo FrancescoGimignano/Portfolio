@@ -2,7 +2,7 @@
 
 Hello, stranger! My name is **Francesco Gimignano**, aka Jimi and this is my portfolio 😁
 
-You can check the live result here 👉🏼 [https://jimiit92.github.io/portfolio/](https://jimiit92.github.io/portfolio/)
+You can check the live result here 👉🏼 [https://francescogimignano.github.io/portfolio/](https://francescogimignano.github.io/portfolio/)
 
 ## 🤔 About the project
 
