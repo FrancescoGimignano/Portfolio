@@ -429,7 +429,7 @@ h2.content__title.interests {
     padding-inline: 0;
 }
 
-.contact__form > span {
+.contact__form button > span {
     position: relative;
     z-index: 1;
 }
