@@ -57,6 +57,7 @@ header {
 .logo {
     font-family: var(--ff-title);
     font-size: clamp(1.5rem, 10vw, 8.5rem);
+    transition: all .5s;
 }
 
 .logo a {
@@ -235,6 +236,7 @@ nav > [data-visible="true"] {
     text-transform: uppercase;
     letter-spacing: .15rem;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
+    transition: all .5s;
 }
 
 .about__download:hover {
@@ -401,16 +403,11 @@ h2.content__title.interests {
     border: none;
     background-color: transparent;
     width: fit-content;
+    transition: all .5s;
 }
 
 .contact__form button:hover {
     color: var(--clr-accent);
-}
-
-.contact__socials a {
-    display: inline-flex;
-    align-items: center;
-    gap: 1em;
 }
 
 .contact__socials {
@@ -419,9 +416,21 @@ h2.content__title.interests {
     gap: 1em;
 }
 
+.contact__socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    transition: all .5s;
+}
+
 .contact__socials a > svg {
     width: 3em;
     height: 3em;
+}
+
+.contact__socials a:hover {
+    color: var(--clr-accent);
+    fill: var(--clr-accent);
 }
 
 /* #endregion */
@@ -442,7 +451,7 @@ body {
 }
 
 section {
-    margin-inline: min(10vw, 25rem);
+    margin-inline: min(20vw, 40rem);
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -655,6 +664,10 @@ svg {
     /* #endregion */
 
     /* #region General Styles */
+
+    section {
+        margin-inline: 1em;
+    }
 
     section > .content {
         flex-direction: column;
