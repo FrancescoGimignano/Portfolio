@@ -151,8 +151,7 @@ nav > [data-visible="true"] {
 }
 
 .header__socials svg:hover {
-    width: 2.25em;
-    height: 2.25em;
+    transform: scale(1.25);
     fill: var(--clr-accent);
 }
 
@@ -237,10 +236,25 @@ nav > [data-visible="true"] {
     letter-spacing: .15rem;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     transition: all .5s;
+    width: fit-content;
 }
 
-.about__download:hover {
-    color: var(--clr-accent);
+.hoverable::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    height: 25%;
+    width: 75%;
+    z-index: -1;
+    background-color: var(--clr-accent);
+    transition: all .5s;
+}
+
+.hoverable:hover::after {
+    height: 100%;
+    width: 100%;
+    transform-origin: 0 0;
 }
 
 img.profile {
@@ -412,10 +426,12 @@ h2.content__title.interests {
     background-color: transparent;
     width: fit-content;
     transition: all .5s;
+    padding-inline: 0;
 }
 
-.contact__form button:hover {
-    color: var(--clr-accent);
+.contact__form > span {
+    position: relative;
+    z-index: 1;
 }
 
 .contact__socials {
@@ -509,9 +525,14 @@ section > .content {
     align-self: baseline;
 }
 
-.content a {
+.content a:not(.about__download) {
     color: var(--clr-text);
     font-weight: var(--fw-medium);
+}
+
+.content a:not(.about__download):hover,
+.content a:not(.about__download):active {
+    color: var(--clr-accent);
 }
 
 .content p,
