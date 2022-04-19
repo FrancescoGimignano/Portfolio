@@ -253,15 +253,6 @@ img.profile {
 
 /* #region What I do */
 
-#what-i-do {
-    gap: 3rem;
-    padding-inline: 2rem;
-}
-
-#what-i-do h2 {
-    margin-bottom: 2.5rem;
-}
-
 .skill__detail {
     display: flex;
     flex-direction: column;
@@ -297,12 +288,6 @@ img.profile {
     stroke-width: .1rem;
 }
 
-.skill__detail h3 {
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    color: var(--clr-title);
-    font-weight: var(--fw-bold);
-}
-
 .skills > *,
 .interests > * {
     flex-basis: 100%;
@@ -332,6 +317,60 @@ h2.content__title.interests {
 
 /* #endregion */
 
+/* #region My experience */
+
+#my-experience > .content {
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#my-experience .content__title {
+    margin-bottom: 0;
+}
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.experience__logo {
+    flex: 25%;
+    padding-block: 1.1em;
+}
+
+.experience__content {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    flex-grow: 1;
+}
+
+.experience__content > p {
+    margin-top: 1.5em;
+    max-width: 100ch;
+}
+
+.experience__content a:hover,
+.experience__content a:active {
+    color: var(--clr-accent);
+}
+
+.experience__title {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.experience__title p > mark {
+    font-size: clamp(.75rem, 1.5vw, 1.5rem);
+    background: var(--clr-accent);
+    color: var(--clr-black);
+    padding: .25rem;
+    font-weight: var(--fw-light);
+}
+
+/* #endregion */
+
 /* #region Footer */
 
 footer {
@@ -348,12 +387,24 @@ body {
 }
 
 section {
-    margin-inline: min(6vw, 25rem);
+    margin-inline: min(10vw, 25rem);
     display: flex;
+    gap: 3rem;
     flex-direction: column;
     padding-block: 5em;
+    padding-inline: 2rem;
     align-items: center;
     justify-content: center;
+}
+
+section h2 {
+    margin-bottom: 2.5rem;
+}
+
+section h3 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: var(--clr-title);
+    font-weight: var(--fw-bold);
 }
 
 section > .content {
@@ -362,6 +413,7 @@ section > .content {
     gap: 2.5rem;
     color: var(--clr-text);
     height: 100%;
+    width: 100%;
 }
 
 .content h2,
@@ -374,6 +426,11 @@ section > .content {
 
 .content__title {
     align-self: baseline;
+}
+
+.content a {
+    color: var(--clr-text);
+    font-weight: var(--fw-medium);
 }
 
 .content p {
@@ -396,6 +453,10 @@ mark {
 svg {
     fill-rule: evenodd;
     clip-rule: evenodd;
+}
+
+.experience__content > p {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
 }
 
 /* #endregion */
@@ -512,6 +573,23 @@ svg {
 
     .skills + .skills {
         margin-top: 1.5rem;
+    }
+
+    /* #endregion */
+
+    /* #region My experience */
+
+    #my-experience > .content {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    #my-experience .content__title.interests {
+        margin-top: 2rem;
+    }
+
+    .experience__logo {
+        display: none;
     }
 
     /* #endregion */
