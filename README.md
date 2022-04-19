@@ -28,6 +28,8 @@ The landing page animation has been made using [Typed.JS](https://github.com/mat
 The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with different font weights, and [Kaushan Script](https://
 fonts.google.com/specimen/Kaushan+Script).
 
+Icons SVG code provided by [Iconify](https://iconify.design/).
+
 The _"about me"_ picture was taken by [Marinella Parente](https://www.instagram.com/marinella_art/), a really talented artist which I've the pleasure to be friend with 👩🏼‍🎨
 
 All the code and UX has been reviewed by [Vincenzo Coppolecchia](https://www.linkedin.com/in/francesco-gimignano-51884314a/), an amazing Front-End developer which I had the fortune to work with for 2 years on my first work experience 😁

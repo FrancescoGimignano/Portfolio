@@ -242,7 +242,7 @@ nav > [data-visible="true"] {
 }
 
 img.profile {
-    max-width: 50%;
+    max-width: 40%;
     height: 100%;
     border: none;
     border-radius: .25em;
@@ -251,7 +251,7 @@ img.profile {
 
 /* #endregion */
 
-/* #region What I Do */
+/* #region What I do */
 
 #what-i-do {
     gap: 3rem;
@@ -276,15 +276,58 @@ img.profile {
     fill: none;
     stroke-width: .25rem;
     stroke: var(--clr-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.skill__detail svg.fill {
+    fill: var(--clr-accent);
+    stroke: none;
+}
+
+.skill__detail svg.ticker {
+    stroke-width: 2rem;
+}
+
+.skill__detail svg.rock {
+    stroke-width: .15rem;
+}
+
+.skill__detail svg.boxing {
+    stroke-width: .1rem;
 }
 
 .skill__detail h3 {
-    font-size: clamp(1rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: var(--clr-title);
+    font-weight: var(--fw-bold);
 }
 
 .skills > *,
 .interests > * {
     flex-basis: 100%;
+}
+
+h2.content__title.interests {
+    margin-top: 5rem;
+    font-size: clamp(1.75rem, 4vw, 4rem);
+}
+
+.interests {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.interests h3 {
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.interests .skill__detail {
+    align-items: center;
+}
+
+.interests .skill__detail svg {
+    --size: 7.5rem;
 }
 
 /* #endregion */
@@ -325,7 +368,7 @@ section > .content {
 .content__title {
     font-family: var(--ff-title);
     color: var(--clr-title);
-    font-size: clamp(1.5rem, 5vw, 5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     line-height: 1.2;
 }
 
@@ -340,10 +383,6 @@ section > .content {
     color: var(--clr-text);
 }
 
-.skill__detail p {
-    font-size: clamp(.75rem, 1.5vw, 1.5rem);
-}
-
 section#what-i-do,
 section#contacts {
     background-color: var(--clr-section-bg);
@@ -354,7 +393,7 @@ mark {
     background-color: transparent;
 }
 
-.social {
+svg {
     fill-rule: evenodd;
     clip-rule: evenodd;
 }
@@ -403,6 +442,10 @@ mark {
         transform: rotateZ(-45deg);
     }
 
+    .nav__btn[aria-expanded="true"] :nth-child(2) {
+        transform: translateX(200%);
+    }
+
     .nav__btn[aria-expanded="true"] :last-child {
         transform: rotateZ(45deg);
     }
@@ -442,6 +485,33 @@ mark {
     img.profile {
         max-width: 75%;
         max-height: 75%;
+    }
+
+    /* #endregion */
+
+    /* #region What I do */
+
+    #what-i-do {
+        gap: 1.5rem;
+        padding-inline: 1rem;
+    }
+
+    .skill__detail {
+        padding-inline: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skill__detail svg {
+        --size: 5rem;
+    }
+
+    .interests .skill__detail svg {
+        --size: 3.5rem;
+    }
+
+    .skills + .skills {
+        margin-top: 1.5rem;
     }
 
     /* #endregion */
