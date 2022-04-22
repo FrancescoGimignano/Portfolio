@@ -8,5 +8,6 @@ new Typed('#title', {
     backSpeed: 50,
     backDelay: 1500,
     shuffle: false,
-    loop: true
+    loop: true,
+    showCursor: false
 });

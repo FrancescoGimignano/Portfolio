@@ -1,0 +1,358 @@
+<!--
+    ( ´･･)ﾉ(._.`)
+
+    Hey, you know you can see my code in a less hacky way, right? ;)
+    CHeck out the source code on GitHub: https://github.com/FrancescoGimignano/Portfolio
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francesco Gimignano | Portfolio</title>
+    <!-- SEO Metatags -->
+    <meta name="description" content="Learn more about Francesco Gimignano, an Italian Full Stack Developer." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://francescogimignano.github.io/portfolio/" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Francesco Gimignano | Portfolio" />
+    <meta property="og:description" content="Learn more about Francesco Gimignano, an Italian Full Stack Developer." />
+    <meta property="og:image" content="../img/bg.webp" />
+    <meta property="og:url" content="http://francescogimignano.github.io/portfolio/" />
+    <meta property="og:site_name" content="Francesco Gimignano | Portfolio" />
+    <!-- Twitter Cards Meta Tags -->
+    <meta property="twitter:title" content="Francesco Gimignano | Portfolio" />
+    <meta property="twitter:description" content="Learn more about Francesco Gimignano, an Italian Full Stack Developer." />
+    <meta property="twitter:image" content="../img/bg.webp" />
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="./assets/css/_reset.css">
+    <link rel="stylesheet" href="./assets/css/_root.css">
+    <link rel="stylesheet" href="./assets/css/styles.old.css">
+    <!-- Site scripts -->
+    <script src="./assets/js/reset.js"></script>
+    <script src="./assets/js/lazy_loaders.js" defer></script>
+    <script src="./assets/js/observers.js" defer></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./assets/js/home_typed.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar" data-nav-sticky="false">
+            <div class="logo">
+                <a href="#">Jimi</a>
+            </div>
+            <button type="button" class="nav__btn" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="nav__links">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#what-i-do" class="nav__link">What I do</a></li>
+                    <li><a href="#my-experience" class="nav__link">My experience</a></li>
+                    <li><a href="#contacts" class="nav__link">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__content">
+            <div class="header__title">
+                <div id="title-values">
+                    <p>Developer</p>
+                    <p>Coder</p>
+                    <p>Designer</p>
+                    <p>Gamer</p>
+                    <p>Artist</p>
+                    <p>Tester</p>
+                    <p>Programmer</p>
+                    <p>Nerd</p>
+                    <p>Content Creator</p>
+                    <p>Video Maker</p>
+                    <p>Reader</p>
+                    <p>Speaker</p>
+                    <p>Memer</p>
+                    <p>Weight lifter</p>
+                    <p>Boxer</p>
+                    <p>Modder</p>
+                    <p>Creative</p>
+                    <p>Minecrafter</p>
+                  </div>
+                <h1 id="title"></h1>
+            </div>
+            <div class="header__socials">
+                <a href="https://github.com/JimiIT92" target="_blank" title="GitHub">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C12.1381 15.0538 13.5181 14.0331 14.4958 12.6716C15.4734 11.31 15.9995 9.67619 16 8C16 3.58 12.42 0 8 0Z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/jimifrancesco/" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.97667 0.710664C5.75867 0.674664 6.008 0.666664 8 0.666664C9.992 0.666664 10.2413 0.675331 11.0227 0.710664C11.804 0.745997 12.3373 0.870664 12.804 1.05133C13.2927 1.236 13.736 1.52466 14.1027 1.898C14.476 2.264 14.764 2.70666 14.948 3.196C15.1293 3.66266 15.2533 4.196 15.2893 4.976C15.3253 5.75933 15.3333 6.00866 15.3333 8C15.3333 9.992 15.3247 10.2413 15.2893 11.0233C15.254 11.8033 15.1293 12.3367 14.948 12.8033C14.764 13.2927 14.4755 13.7361 14.1027 14.1027C13.736 14.476 13.2927 14.764 12.804 14.948C12.3373 15.1293 11.804 15.2533 11.024 15.2893C10.2413 15.3253 9.992 15.3333 8 15.3333C6.008 15.3333 5.75867 15.3247 4.97667 15.2893C4.19667 15.254 3.66333 15.1293 3.19667 14.948C2.70728 14.764 2.26388 14.4755 1.89733 14.1027C1.52425 13.7364 1.23554 13.2933 1.05133 12.804C0.870668 12.3373 0.746668 11.804 0.710668 11.024C0.674668 10.2407 0.666668 9.99133 0.666668 8C0.666668 6.008 0.675335 5.75866 0.710668 4.97733C0.746001 4.196 0.870668 3.66266 1.05133 3.196C1.23582 2.70672 1.52475 2.26354 1.898 1.89733C2.26403 1.52433 2.70698 1.23563 3.196 1.05133C3.66267 0.870664 4.196 0.746664 4.976 0.710664H4.97667ZM10.9633 2.03066C10.19 1.99533 9.958 1.988 8 1.988C6.042 1.988 5.81 1.99533 5.03667 2.03066C4.32133 2.06333 3.93333 2.18266 3.67467 2.28333C3.33267 2.41666 3.088 2.57466 2.83133 2.83133C2.58803 3.06803 2.40079 3.35619 2.28333 3.67466C2.18267 3.93333 2.06333 4.32133 2.03067 5.03666C1.99533 5.81 1.988 6.042 1.988 8C1.988 9.958 1.99533 10.19 2.03067 10.9633C2.06333 11.6787 2.18267 12.0667 2.28333 12.3253C2.40067 12.6433 2.588 12.932 2.83133 13.1687C3.068 13.412 3.35667 13.5993 3.67467 13.7167C3.93333 13.8173 4.32133 13.9367 5.03667 13.9693C5.81 14.0047 6.04133 14.012 8 14.012C9.95867 14.012 10.19 14.0047 10.9633 13.9693C11.6787 13.9367 12.0667 13.8173 12.3253 13.7167C12.6673 13.5833 12.912 13.4253 13.1687 13.1687C13.412 12.932 13.5993 12.6433 13.7167 12.3253C13.8173 12.0667 13.9367 11.6787 13.9693 10.9633C14.0047 10.19 14.012 9.958 14.012 8C14.012 6.042 14.0047 5.81 13.9693 5.03666C13.9367 4.32133 13.8173 3.93333 13.7167 3.67466C13.5833 3.33266 13.4253 3.088 13.1687 2.83133C12.932 2.58804 12.6438 2.4008 12.3253 2.28333C12.0667 2.18266 11.6787 2.06333 10.9633 2.03066ZM7.06333 10.2607C7.58644 10.4784 8.16892 10.5078 8.71129 10.3438C9.25365 10.1798 9.72226 9.83261 10.0371 9.36149C10.3519 8.89038 10.4934 8.32458 10.4374 7.76073C10.3814 7.19689 10.1313 6.66998 9.73 6.27C9.47416 6.01431 9.16481 5.81854 8.82422 5.69676C8.48364 5.57499 8.12029 5.53024 7.76033 5.56574C7.40038 5.60124 7.05277 5.71611 6.74254 5.90208C6.4323 6.08805 6.16716 6.34049 5.9662 6.64123C5.76524 6.94197 5.63346 7.28352 5.58034 7.6413C5.52723 7.99909 5.5541 8.36419 5.65903 8.71034C5.76395 9.05649 5.94432 9.37507 6.18715 9.64314C6.42997 9.91122 6.72922 10.1221 7.06333 10.2607ZM5.33467 5.33466C5.68468 4.98465 6.10021 4.707 6.55753 4.51757C7.01485 4.32814 7.505 4.23065 8 4.23065C8.495 4.23065 8.98515 4.32814 9.44247 4.51757C9.89979 4.707 10.3153 4.98465 10.6653 5.33466C11.0154 5.68468 11.293 6.10021 11.4824 6.55753C11.6719 7.01485 11.7694 7.505 11.7694 8C11.7694 8.495 11.6719 8.98515 11.4824 9.44246C11.293 9.89978 11.0154 10.3153 10.6653 10.6653C9.95844 11.3722 8.99969 11.7693 8 11.7693C7.00031 11.7693 6.04156 11.3722 5.33467 10.6653C4.62778 9.95844 4.23065 8.99969 4.23065 8C4.23065 7.0003 4.62778 6.04155 5.33467 5.33466ZM12.6053 4.792C12.6921 4.71018 12.7615 4.61178 12.8095 4.50265C12.8576 4.39351 12.8832 4.27584 12.8849 4.15662C12.8867 4.03739 12.8645 3.91903 12.8197 3.80854C12.7748 3.69805 12.7083 3.59767 12.624 3.51336C12.5397 3.42904 12.4393 3.3625 12.3288 3.31768C12.2183 3.27285 12.0999 3.25065 11.9807 3.25239C11.8615 3.25412 11.7438 3.27977 11.6347 3.32779C11.5255 3.37582 11.4272 3.44526 11.3453 3.532C11.1862 3.70068 11.0991 3.92474 11.1025 4.15662C11.1058 4.38849 11.1995 4.60992 11.3634 4.77389C11.5274 4.93787 11.7488 5.03148 11.9807 5.03486C12.2126 5.03824 12.4366 4.95112 12.6053 4.792Z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/francesco-gimignano-51884314a" target="_blank" title="LinkedIn">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.666664 1.892C0.666664 1.56702 0.795762 1.25535 1.02556 1.02556C1.25535 0.795763 1.56702 0.666666 1.892 0.666666H14.1067C14.2677 0.666403 14.4272 0.697908 14.5761 0.759377C14.725 0.820846 14.8602 0.911072 14.9742 1.02489C15.0881 1.13871 15.1785 1.27388 15.2401 1.42267C15.3017 1.57146 15.3334 1.73095 15.3333 1.892V14.1067C15.3335 14.2677 15.3019 14.4273 15.2404 14.5761C15.1788 14.725 15.0885 14.8603 14.9747 14.9742C14.8608 15.0881 14.7256 15.1785 14.5768 15.2401C14.4279 15.3017 14.2684 15.3334 14.1073 15.3333H1.892C1.73103 15.3333 1.57164 15.3016 1.42293 15.24C1.27422 15.1784 1.13911 15.0881 1.02532 14.9742C0.911529 14.8604 0.821285 14.7252 0.759746 14.5765C0.698206 14.4277 0.666577 14.2683 0.666664 14.1073V1.892ZM6.472 6.25867H8.458V7.256C8.74467 6.68267 9.478 6.16667 10.58 6.16667C12.6927 6.16667 13.1933 7.30867 13.1933 9.404V13.2853H11.0553V9.88133C11.0553 8.688 10.7687 8.01467 10.0407 8.01467C9.03067 8.01467 8.61067 8.74067 8.61067 9.88133V13.2853H6.472V6.25867ZM2.80533 13.194H4.944V6.16667H2.80533V13.1933V13.194ZM5.25 3.87467C5.25403 4.05778 5.22145 4.23986 5.15416 4.41021C5.08687 4.58056 4.98623 4.73576 4.85815 4.86669C4.73007 4.99762 4.57713 5.10165 4.4083 5.17267C4.23947 5.24369 4.05816 5.28028 3.875 5.28028C3.69184 5.28028 3.51052 5.24369 3.34169 5.17267C3.17287 5.10165 3.01992 4.99762 2.89184 4.86669C2.76376 4.73576 2.66313 4.58056 2.59584 4.41021C2.52855 4.23986 2.49597 4.05778 2.5 3.87467C2.50791 3.51524 2.65625 3.17319 2.91325 2.92179C3.17026 2.67039 3.51548 2.52961 3.875 2.52961C4.23452 2.52961 4.57974 2.67039 4.83674 2.92179C5.09374 3.17319 5.24208 3.51524 5.25 3.87467Z"/>
+                    </svg>
+                </a>
+                <a href="http://discordapp.com/users/155469699109486592" target="_blank" title="Discord">
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.482 0C14.4195 0 15.1745 0.758 15.219 1.651V16L13.435 14.4845L12.456 13.594L11.3855 12.6615L11.831 14.1305H2.47399C1.53899 14.1305 0.781494 13.422 0.781494 12.4795V1.654C0.781494 0.761 1.53949 0.003 2.47699 0.003H13.477L13.482 0ZM9.40349 3.789H9.38249L9.24699 3.922C10.63 4.323 11.299 4.948 11.299 4.948C10.4085 4.5025 9.60349 4.2785 8.80149 4.1875C8.22349 4.099 7.64249 4.146 7.15299 4.1875H7.01749C6.70499 4.1875 6.03849 4.323 5.14499 4.6795C4.83499 4.815 4.65549 4.9035 4.65549 4.9035C4.65549 4.9035 5.32199 4.234 6.79599 3.8775L6.70499 3.789C6.70499 3.789 5.59049 3.7445 4.38749 4.6355C4.38749 4.6355 3.18449 6.732 3.18449 9.315C3.18449 9.315 3.85099 10.474 5.67949 10.518C5.67949 10.518 5.94749 10.164 6.21599 9.8515C5.18999 9.539 4.78899 8.914 4.78899 8.914C4.78899 8.914 4.87999 8.9585 5.01299 9.047H5.05199C5.07299 9.047 5.08349 9.0575 5.09349 9.068V9.073C5.10399 9.0835 5.11449 9.091 5.13249 9.091C5.35399 9.182 5.57249 9.2705 5.75249 9.359C6.06499 9.492 6.46349 9.627 6.95299 9.716C7.57299 9.807 8.28349 9.849 9.09349 9.716C9.49199 9.625 9.89299 9.539 10.294 9.359C10.552 9.226 10.872 9.0935 11.2235 8.867C11.2235 8.867 10.825 9.492 9.75449 9.8045C9.97349 10.1145 10.283 10.471 10.283 10.471C12.1135 10.4295 12.8245 9.2705 12.8635 9.32C12.8635 6.7395 11.6525 4.6405 11.6525 4.6405C10.564 3.8305 9.54299 3.7995 9.36349 3.7995L9.39999 3.7865L9.40349 3.789ZM9.51549 6.732C9.98449 6.732 10.362 7.1305 10.362 7.62C10.362 8.115 9.98199 8.513 9.51549 8.513C9.04649 8.513 8.66899 8.1145 8.66899 7.625C8.66899 7.13 9.04899 6.732 9.51549 6.732ZM6.48699 6.732C6.95299 6.732 7.33099 7.1305 7.33099 7.62C7.33099 8.115 6.95099 8.513 6.48449 8.513C6.01549 8.513 5.63549 8.1145 5.63549 7.625C5.63549 7.13 6.01549 6.732 6.48449 6.732H6.48699Z"/>
+                    </svg>
+                </a>                   
+            </div>
+        </div>
+        <div class="header__scroll">
+            <a href="#about">
+                <svg viewBox="0 0 48 48">
+                    <path d="M14 18.75L24 28.75L34 18.75"/>
+                    <path d="M14 26L24 36L34 26"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="content">
+                <img class="profile" data-src="./assets/img/profile.webp" alt="Francesco Gimignano">
+                <div class="about__content">
+                    <h2>I'm Francesco Gimignano, aka Jimi, a Full Stack Developer based in South Italy.</h1>
+                    <div class="about__description">
+                        <p>I'm a young italian man, born in 1992, grown with bread, Doom and Pink Floyd.</p>
+                        <br />
+                        <p>Since I was a child I've been passionate about computers and everything related to them, so I decided to become an active part of it.</p>
+                        <br />
+                        <p>Curiosity is what drives me to improve myself, allowing me to cover almost every aspect of the softwares I create.</p>
+                    </div>
+                    <a class="about__download hoverable" href="https://drive.google.com/file/d/1dll2aEc7FSmz8LFQYWE8T2pXzzcYqExz/view?usp=sharing" target="_blank">Download CV</a>
+                </div>
+            </div>
+        </section>
+        <section id="what-i-do">
+            <h2 class="content__title">What I do</h2>
+            <div class="content skills">
+                <div class="skill__detail">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.375 63.0938C48.375 63.5062 48.6937 63.8438 49.0781 63.8438H66.4219C66.8063 63.8438 67.125 63.5062 67.125 63.0938V58.5938C67.125 58.1813 66.8063 57.8438 66.4219 57.8438H49.0781C48.6937 57.8438 48.375 58.1813 48.375 58.5938V63.0938ZM30.1031 63.6656L48.1031 48.5719C48.4594 48.2719 48.4594 47.7188 48.1031 47.4187L30.1031 32.3344C29.9945 32.242 29.8616 32.1827 29.7202 32.1636C29.5789 32.1444 29.435 32.1663 29.3057 32.2265C29.1764 32.2867 29.0671 32.3828 28.9907 32.5033C28.9144 32.6237 28.8742 32.7636 28.875 32.9062V38.7844C28.875 39.0094 28.9688 39.2156 29.1469 39.3562L39.4406 48L29.1469 56.6438C29.0631 56.7139 28.9954 56.8013 28.9485 56.9C28.9016 56.9987 28.8765 57.1064 28.875 57.2156V63.0938C28.875 63.7313 29.6156 64.0781 30.1031 63.6656ZM82.5 10.5H13.5C11.8406 10.5 10.5 11.8406 10.5 13.5V82.5C10.5 84.1594 11.8406 85.5 13.5 85.5H82.5C84.1594 85.5 85.5 84.1594 85.5 82.5V13.5C85.5 11.8406 84.1594 10.5 82.5 10.5ZM78.75 78.75H17.25V17.25H78.75V78.75Z"/>
+                    </svg>
+                    <h3>Backend</h3>
+                    <p>I can code in different backend-languages, such as <strong>C#</strong> (both .NET Framework and .NET Core), <strong>Java</strong>, <strong>Python</strong>, <strong>Node.JS</strong> and <strong>GoLang</strong>.</p>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M80 12H16C11.588 12 8 15.588 8 20V76C8 80.412 11.588 84 16 84H80C84.412 84 88 80.412 88 76V20C88 15.588 84.412 12 80 12ZM16 76V28H80L80.008 76H16Z"/>
+                        <path d="M37.172 37.172L22.344 52L37.172 66.828L42.828 61.172L33.656 52L42.828 42.828L37.172 37.172ZM58.828 37.172L53.172 42.828L62.344 52L53.172 61.172L58.828 66.828L73.656 52L58.828 37.172Z"/>
+                    </svg>
+                    <h3>Frontend</h3>
+                    <p><strong>Javascript</strong> and <strong>Typescript</strong> are my main frontend-languages, alongside the traditional <strong>HTML/CSS stack</strong> (often with <strong>SASS</strong>).</p>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 8V21.008C50 21.8036 50.3161 22.5667 50.8787 23.1293C51.4413 23.6919 52.2043 24.008 53 24.008C53.7957 24.008 54.5587 23.6919 55.1213 23.1293C55.6839 22.5667 56 21.8036 56 21.008V8H60V25.004C60 25.7996 60.3161 26.5627 60.8787 27.1253C61.4413 27.6879 62.2043 28.004 63 28.004C63.7957 28.004 64.5587 27.6879 65.1213 27.1253C65.6839 26.5627 66 25.7996 66 25.004V8H73C73.7957 8 74.5587 8.31607 75.1213 8.87868C75.6839 9.44129 76 10.2044 76 11V44H20V11C20 10.2044 20.3161 9.44129 20.8787 8.87868C21.4413 8.31607 22.2044 8 23 8H50ZM20 50V57.008C20 59.3949 20.9482 61.6841 22.636 63.372C24.3239 65.0598 26.6131 66.008 29 66.008H40V80C40 82.1217 40.8429 84.1566 42.3431 85.6569C43.8434 87.1571 45.8783 88 48 88C50.1217 88 52.1566 87.1571 53.6569 85.6569C55.1571 84.1566 56 82.1217 56 80V66.008H67C68.1819 66.008 69.3522 65.7752 70.4442 65.3229C71.5361 64.8706 72.5282 64.2077 73.364 63.372C74.1997 62.5362 74.8626 61.5441 75.3149 60.4522C75.7672 59.3602 76 58.1899 76 57.008V50H20Z"/>
+                    </svg>   
+                    <h3>Design</h3>
+                    <p>I can provide visual mockups of the applications I'm working on using different prototyping, such as <strong>Figma</strong> or <strong>Adobe XD</strong>, and graphic tools like <strong>Adobe Photoshop</strong> or <strong>Blender</strong> for 3D.</p>
+                </div>
+            </div>
+            <div class="content skills">
+                <div class="skill__detail">
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="ticker">
+                        <path d="M832 64H192C174.3 64 160 78.3 160 96V928C160 945.7 174.3 960 192 960H832C849.7 960 864 945.7 864 928V96C864 78.3 849.7 64 832 64ZM232 136H792V344H232V136ZM792 616H232V408H792V616ZM792 888H232V680H792V888ZM304 240C304 250.609 308.214 260.783 315.716 268.284C323.217 275.786 333.391 280 344 280C354.609 280 364.783 275.786 372.284 268.284C379.786 260.783 384 250.609 384 240C384 229.391 379.786 219.217 372.284 211.716C364.783 204.214 354.609 200 344 200C333.391 200 323.217 204.214 315.716 211.716C308.214 219.217 304 229.391 304 240V240ZM304 512C304 522.609 308.214 532.783 315.716 540.284C323.217 547.786 333.391 552 344 552C354.609 552 364.783 547.786 372.284 540.284C379.786 532.783 384 522.609 384 512C384 501.391 379.786 491.217 372.284 483.716C364.783 476.214 354.609 472 344 472C333.391 472 323.217 476.214 315.716 483.716C308.214 491.217 304 501.391 304 512V512ZM304 784C304 794.609 308.214 804.783 315.716 812.284C323.217 819.786 333.391 824 344 824C354.609 824 364.783 819.786 372.284 812.284C379.786 804.783 384 794.609 384 784C384 773.391 379.786 763.217 372.284 755.716C364.783 748.214 354.609 744 344 744C333.391 744 323.217 748.214 315.716 755.716C308.214 763.217 304 773.391 304 784V784Z"/>
+                    </svg>
+                    <h3>Database</h3>
+                    <p>I have a good knwoledge of both SQL and No-SQL Databases, like <strong>SQL Server</strong>, <strong>MySQL</strong>, <strong>Redis</strong>, <strong>MongoDB</strong> and <strong>AWS Dynamo DB</strong>.</p>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="fill">
+                        <path d="M32 26V24H29.899C29.77 23.374 29.5215 22.7788 29.167 22.247L30.657 20.757L29.243 19.343L27.753 20.833C27.2212 20.4785 26.626 20.23 26 20.101V18H24V20.101C23.374 20.23 22.7788 20.4785 22.247 20.833L20.757 19.343L19.343 20.757L20.833 22.247C20.4785 22.7788 20.23 23.374 20.101 24H18V26H20.101C20.23 26.626 20.4785 27.2212 20.833 27.753L19.343 29.243L20.757 30.657L22.247 29.167C22.7788 29.5215 23.374 29.77 24 29.899V32H26V29.899C26.626 29.77 27.2212 29.5215 27.753 29.167L29.243 30.657L30.657 29.243L29.167 27.753C29.5215 27.2212 29.77 26.626 29.899 26H32ZM25 28C24.4067 28 23.8266 27.8241 23.3333 27.4944C22.8399 27.1648 22.4554 26.6962 22.2284 26.1481C22.0013 25.5999 21.9419 24.9967 22.0576 24.4147C22.1734 23.8328 22.4591 23.2982 22.8787 22.8787C23.2982 22.4591 23.8328 22.1734 24.4147 22.0576C24.9967 21.9419 25.5999 22.0013 26.1481 22.2284C26.6962 22.4554 27.1648 22.8399 27.4944 23.3333C27.8241 23.8266 28 24.4067 28 25C27.9992 25.7954 27.6829 26.558 27.1204 27.1204C26.558 27.6829 25.7954 27.9992 25 28V28Z"/>
+                        <path d="M7 22C8.10457 22 9 21.1046 9 20C9 18.8954 8.10457 18 7 18C5.89543 18 5 18.8954 5 20C5 21.1046 5.89543 22 7 22Z"/>
+                        <path d="M14 20C13.2089 20 12.4355 19.7654 11.7777 19.3259C11.1199 18.8864 10.6072 18.2616 10.3045 17.5307C10.0017 16.7998 9.92252 15.9956 10.0769 15.2196C10.2312 14.4437 10.6122 13.731 11.1716 13.1716C11.731 12.6122 12.4437 12.2312 13.2196 12.0769C13.9956 11.9225 14.7998 12.0017 15.5307 12.3045C16.2616 12.6072 16.8864 13.1199 17.3259 13.7777C17.7654 14.4355 18 15.2089 18 16C17.9968 17.0599 17.5744 18.0755 16.8249 18.8249C16.0755 19.5744 15.0599 19.9968 14 20V20ZM14 14C13.6044 14 13.2178 14.1173 12.8889 14.3371C12.56 14.5568 12.3036 14.8692 12.1522 15.2346C12.0009 15.6001 11.9613 16.0022 12.0384 16.3902C12.1156 16.7781 12.3061 17.1345 12.5858 17.4142C12.8655 17.6939 13.2219 17.8844 13.6098 17.9616C13.9978 18.0387 14.3999 17.9991 14.7654 17.8478C15.1308 17.6964 15.4432 17.44 15.6629 17.1111C15.8827 16.7822 16 16.3956 16 16C15.9984 15.4701 15.7872 14.9623 15.4125 14.5875C15.0377 14.2128 14.5299 14.0016 14 14Z"/>
+                        <path d="M21 14C22.1046 14 23 13.1046 23 12C23 10.8954 22.1046 10 21 10C19.8954 10 19 10.8954 19 12C19 13.1046 19.8954 14 21 14Z"/>
+                        <path d="M13.02 28.2711L3 22.4271V9.57405L14 3.15805L25.496 9.86405L26.504 8.13605L14.504 1.13605C14.351 1.04679 14.1771 0.999756 14 0.999756C13.8229 0.999756 13.649 1.04679 13.496 1.13605L1.496 8.13605C1.34502 8.22415 1.21978 8.35029 1.13275 8.50189C1.04572 8.65349 0.999948 8.82525 1 9.00005V23.0001C0.999948 23.1749 1.04572 23.3466 1.13275 23.4982C1.21978 23.6498 1.34502 23.776 1.496 23.8641L12.013 30.0001L13.02 28.2711Z"/>
+                    </svg>    
+                    <h3>Architecture</h3>
+                    <p>I can help setup/migrate a project towards a modern software architecture, like <strong>Microservices</strong> and <strong>Serverless</strong> (both experience on <strong>AWS</strong>).</p>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_111)">
+                        <path d="M96 23.9999V18.2351C96.0006 17.7313 95.9019 17.2323 95.7094 16.7667C95.5168 16.3011 95.2344 15.8781 94.8781 15.5218C94.5219 15.1655 94.0988 14.8831 93.6332 14.6906C93.1676 14.498 92.6686 14.3993 92.1648 14.3999H3.8448C3.34053 14.3993 2.84106 14.498 2.37493 14.6904C1.9088 14.8828 1.48513 15.1651 1.12811 15.5212C0.771083 15.8774 0.487702 16.3003 0.294142 16.766C0.100581 17.2316 0.000632955 17.7308 3.00403e-06 18.2351V23.9999H9.6V33.5999H3.00403e-06V43.1999H9.6V52.7999H3.00403e-06V62.3999H9.6V71.9999H3.00403e-06V77.7551C-0.000628746 78.2602 0.0983888 78.7605 0.291384 79.2272C0.48438 79.694 0.767561 80.1181 1.12471 80.4752C1.48186 80.8324 1.90596 81.1155 2.37271 81.3085C2.83947 81.5015 3.33972 81.6005 3.8448 81.5999H92.1648C92.6691 81.5993 93.1683 81.4993 93.6339 81.3058C94.0996 81.1122 94.5226 80.8288 94.8787 80.4718C95.2348 80.1148 95.5171 79.6911 95.7095 79.225C95.9019 78.7589 96.0006 78.2594 96 77.7551V71.9999H86.4V62.3999H96V52.7999H86.4V43.1999H96V33.5999H86.4V23.9999H96ZM38.4 62.3999V33.5999L62.4 47.9999L38.4 62.3999Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1_111">
+                        <rect width="96" height="96"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <h3>Video Editing</h3>
+                    <p>I like to make some videos for/with my friends or to showcase some of my projects using <strong>Adobe Premiere</strong>, often in conjunction with the <strong>OBS Studio</strong> capturing software.</p>
+                </div>
+            </div>
+            <h2 class="content__title interests">My interests</h2>
+            <div class="content skills interests">
+                <div class="skill__detail">
+                    <svg viewBox="0 0 41 44" xmlns="http://www.w3.org/2000/svg" class="rock">
+                        <path d="M20 23V5.5C20 4.219 20.5 2 23 2C25.5 2 26 4.219 26 5.5V28L33 21C34.297 19.703 36.078 19.078 37.5 20.5C38.922 21.922 39.094 23.406 37.5 25L31 31.5C31 31.5 25.094 42 22 42H9C9 42 6 42 4 40C2 38 2 35.5 2 35.5V10.781C2 10.062 2.5 8 5 8C7.5 8 8 10 8 10.781V23"/>
+                        <path d="M14 20C14 18.3431 12.6569 17 11 17C9.34315 17 8 18.3431 8 20V26C8 27.6569 9.34315 29 11 29C12.6569 29 14 27.6569 14 26V20Z"/>
+                        <path d="M20 20C20 18.3431 18.6569 17 17 17C15.3431 17 14 18.3431 14 20V26C14 27.6569 15.3431 29 17 29C18.6569 29 20 27.6569 20 26V20Z"/>
+                    </svg>    
+                    <h3>Rock Music</h3>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill">
+                        <path d="M21 8C20.798 8 16.15 8.029 12 10.008C7.85 8.029 3.202 8 3 8C2.73478 8 2.48043 8.10536 2.29289 8.29289C2.10536 8.48043 2 8.73478 2 9V18.883C2 19.0172 2.02701 19.15 2.0794 19.2735C2.1318 19.397 2.20852 19.5087 2.305 19.602C2.5 19.79 2.785 19.907 3.034 19.882L3.161 19.881C3.844 19.881 7.457 19.979 11.577 21.906C11.593 21.914 11.611 21.911 11.627 21.917C11.746 21.966 11.871 22 12 22C12.129 22 12.254 21.966 12.374 21.917C12.39 21.911 12.408 21.914 12.424 21.906C16.544 19.978 20.157 19.881 20.84 19.881L20.967 19.882C21.205 19.907 21.5 19.79 21.696 19.602C21.89 19.413 22 19.153 22 18.883V9C22 8.73478 21.8946 8.48043 21.7071 8.29289C21.5196 8.10536 21.2652 8 21 8ZM4 10.049C5.485 10.16 8.381 10.529 11 11.741V19.483C8 18.308 5.41 17.989 4 17.907V10.049ZM20 17.907C18.59 17.989 16 18.308 13 19.483V11.741C15.619 10.529 18.515 10.16 20 10.049V17.907Z"/>
+                        <path d="M12 8C13.6569 8 15 6.65685 15 5C15 3.34315 13.6569 2 12 2C10.3431 2 9 3.34315 9 5C9 6.65685 10.3431 8 12 8Z"/>
+                    </svg>
+                    <h3>Books</h3>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="ticker">
+                        <path d="M467.51 248.83C449.11 165.65 421.82 112.59 378.08 99.66C369.609 97.1888 360.824 95.956 352 96C325.11 96 303.89 112 256 112C208.11 112 186.85 96 160 96C150.808 95.9524 141.653 97.1842 132.8 99.66C89.0001 112.59 61.9401 165.7 43.3301 248.83C24.3301 333.74 27.7701 400.83 64.9101 413.71C90.9101 422.71 114.16 404.1 136.18 376.71C161.18 345.51 191.97 335.91 256 335.91C320.03 335.91 349.62 345.51 374.66 376.71C396.66 404.12 420.77 422.5 446.08 413.87C487.1 399.86 486.52 334.74 467.51 248.83Z"/>
+                        <path d="M292 244C303.046 244 312 235.046 312 224C312 212.954 303.046 204 292 204C280.954 204 272 212.954 272 224C272 235.046 280.954 244 292 244Z"/>
+                        <path d="M336 288C332.042 288 328.173 286.826 324.883 284.626C321.593 282.426 319.03 279.3 317.518 275.642C316.005 271.985 315.612 267.961 316.388 264.08C317.164 260.199 319.074 256.635 321.876 253.84C324.678 251.045 328.246 249.144 332.129 248.378C336.012 247.612 340.035 248.015 343.688 249.537C347.342 251.058 350.462 253.629 352.654 256.925C354.845 260.221 356.01 264.092 356 268.05C355.987 273.346 353.874 278.42 350.124 282.16C346.375 285.9 341.296 288 336 288V288Z"/>
+                        <path d="M336 200C347.046 200 356 191.046 356 180C356 168.954 347.046 160 336 160C324.954 160 316 168.954 316 180C316 191.046 324.954 200 336 200Z"/>
+                        <path d="M380 244C391.046 244 400 235.046 400 224C400 212.954 391.046 204 380 204C368.954 204 360 212.954 360 224C360 235.046 368.954 244 380 244Z"/>
+                        <path d="M208 224H112M160 176V272V176Z"/>
+                    </svg>                        
+                    <h3>Video Games</h3>
+                </div>
+                <div class="skill__detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="boxing">
+                        <path d="M8.489 17.727h9.867m-9.867 0V21h9.867v-3.273m-9.867 0C5.2 15.546 3.556 10.091 4.104 8.455c.438-1.31 2.375-.91 3.289-.546C7.393 4.091 9.037 3 13.423 3C17.806 3 20 4.09 20 9.545c0 4.364-1.096 7.273-1.644 8.182"/>
+                        <path d="M7.393 7.91C7.758 8.272 8.818 9 10.133 9h4.934M7.393 7.91c0 3.817 1.644 4.363 2.74 4.363"/>
+                    </svg>
+                    <h3>Boxing</h3>
+                </div>
+                <div class="skill__detail">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.856 27.8799C47.856 27.8799 35.556 29.1039 29.116 23.7399C22.676 18.3719 24.144 8.11995 24.144 8.11995C24.144 8.11995 36.444 6.89595 42.888 12.2599C49.328 17.6279 47.856 27.8799 47.856 27.8799V27.8799Z"/>
+                        <path d="M48.144 27.8799C48.144 27.8799 60.444 29.1039 66.884 23.7399C73.324 18.3719 71.856 8.11995 71.856 8.11995C71.856 8.11995 59.556 6.89595 53.116 12.2599C46.676 17.6279 48.144 27.8799 48.144 27.8799V27.8799ZM16 44C16 42.9391 16.4214 41.9217 17.1716 41.1715C17.9217 40.4214 18.9391 40 20 40H76C77.0609 40 78.0783 40.4214 78.8284 41.1715C79.5786 41.9217 80 42.9391 80 44V52C80 53.0608 79.5786 54.0782 78.8284 54.8284C78.0783 55.5785 77.0609 56 76 56H20C18.9391 56 17.9217 55.5785 17.1716 54.8284C16.4214 54.0782 16 53.0608 16 52V44ZM20 56H76L68 87.9999H28L20 56Z"/>
+                    </svg>                          
+                    <h3>Sustainability</h3>
+                </div>
+            </div>
+        </section>
+        <section id="my-experience">
+            <div class="content">
+                <h2 class="content__title">My work experience</h2>
+                <div class="experience">
+                    <div class="experience__logo"><img data-src="./assets/img/experiences/nexus.webp" alt="Nexus A.T."></div>
+                    <div class="experience__content">
+                        <h3>Nexus A.T.</h3>
+                        <div class="experience__title">
+                            <p>Full Stack Developer</p>
+                            <p><mark>Mar 2020 - Current</mark></p>
+                        </div>
+                        <p>
+                            I use the <strong>Microsoft .NET Technology Stack</strong> to maintain and
+                            develop new features for Wolters Kluwer Software <strong>Genya</strong>.
+                            <br />I am often responsible for UI elements, made with <strong>HTML5, SCSS and Typescript</strong>
+                            on top of a custom, internal Angular-like framework.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="experience__logo"><img data-src="./assets/img/experiences/ecom.webp" alt="Ecom Imaging"></div>
+                    <div class="experience__content">
+                        <h3>Ecom Imaging</h3>
+                        <div class="experience__title">
+                            <p>Backend Developer</p>
+                            <p><mark>Sep 2017 - Feb 2020</mark></p>
+                        </div>
+                        <p>
+                            I started developing and maintaining some interal company tools and
+                            the company e-commerce websites, like <a href="https://www.fotoregali.com" target="_blank" title="Fotoregal">fotoregali.com</a>.
+                            <br /> I then contributed to the migration of the aforementioned websites and internal systems 
+                            to the <strong>AWS cloud</strong>, managing the entire life cycle and resources of different microservices,
+                            for which I chose the appropriate language for the purpose of the service itself.
+                            <br /> I also contributed to introduce new business and development processes, like the <strong>Agile methodology</strong>.
+                        </p>
+                    </div>
+                </div>
+                <h2 class="content__title interests">Personal experience</h2>
+                <p>Are you interested in my projects? I usually host them on <a href="https://github.com/JimiIT92" target="_blank" title="GitHub">GitHub</a>. <br />Here I mention experiences I've been part of, thus can't be found elsewhere.
+                <div class="experience">
+                    <div class="experience__logo"><img data-src="./assets/img/experiences/aulab.webp" alt="Aulab Tech Summer Campus"></div>
+                    <div class="experience__content">
+                        <h3>Tech Summer Campus</h3>
+                        <div class="experience__title">
+                            <p>Aulab</p>
+                            <p><mark>Jun - Aug 2017</mark></p>
+                        </div>
+                        <p>
+                            Shortly after being graduated I've been selected to partecipate  in this <strong>professional
+                            training course</strong>, hosted by AuLab, where I learned the fundamentals of Web Development
+                            and the Agile methodology.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="experience__logo"><img data-src="./assets/img/experiences/libroscopio.webp" alt="Fiera del Libroscopio"></div>
+                    <div class="experience__content">
+                        <h3>Morwen's Curse</h3>
+                        <div class="experience__title">
+                            <p>Noicattaro Libroscopio Fair</p>
+                            <p><mark>Nov 2014</mark></p>
+                        </div>
+                        <p>
+                            During the university I developed, in team with other classmates, a <strong>2D rogue like video game</strong> without a game engine such as Unity or Unreal. <br />
+                            The goal was to escape a procedurally generated dungeon, but to do so the player has to solve a puzzle before proceding to the next level. <br />
+                            The player has an inventory and some skills at disposal to win the game, with every level being harder than the prvious one, leading to a boss fight on the final level.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <h2 class="content__title">Contact me</h2>
+            <div class="content">
+                <div class="contact__form">
+                    <form action="mailto:f.gimignano92@gmail.com" method="post" enctype="multipart/form-data">
+                        <label for="name">Name *</label>
+                        <input type="text" name="name" id="name" required>
+                        <label for="message">Message *</label>
+                        <textarea name="message" id="message" cols="100" rows="10" required></textarea>
+                        <button type="submit"><span class="hoverable">Send message</span></button>
+                    </form>
+                </div>
+                <div class="contact__socials">
+                    <a href="https://github.com/JimiIT92" target="_blank" title="GitHub">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C12.1381 15.0538 13.5181 14.0331 14.4958 12.6716C15.4734 11.31 15.9995 9.67619 16 8C16 3.58 12.42 0 8 0Z"/>
+                        </svg>
+                        JimiIT92
+                    </a>
+                    <a href="https://www.instagram.com/jimifrancesco/" target="_blank" title="Instagram">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.97667 0.710664C5.75867 0.674664 6.008 0.666664 8 0.666664C9.992 0.666664 10.2413 0.675331 11.0227 0.710664C11.804 0.745997 12.3373 0.870664 12.804 1.05133C13.2927 1.236 13.736 1.52466 14.1027 1.898C14.476 2.264 14.764 2.70666 14.948 3.196C15.1293 3.66266 15.2533 4.196 15.2893 4.976C15.3253 5.75933 15.3333 6.00866 15.3333 8C15.3333 9.992 15.3247 10.2413 15.2893 11.0233C15.254 11.8033 15.1293 12.3367 14.948 12.8033C14.764 13.2927 14.4755 13.7361 14.1027 14.1027C13.736 14.476 13.2927 14.764 12.804 14.948C12.3373 15.1293 11.804 15.2533 11.024 15.2893C10.2413 15.3253 9.992 15.3333 8 15.3333C6.008 15.3333 5.75867 15.3247 4.97667 15.2893C4.19667 15.254 3.66333 15.1293 3.19667 14.948C2.70728 14.764 2.26388 14.4755 1.89733 14.1027C1.52425 13.7364 1.23554 13.2933 1.05133 12.804C0.870668 12.3373 0.746668 11.804 0.710668 11.024C0.674668 10.2407 0.666668 9.99133 0.666668 8C0.666668 6.008 0.675335 5.75866 0.710668 4.97733C0.746001 4.196 0.870668 3.66266 1.05133 3.196C1.23582 2.70672 1.52475 2.26354 1.898 1.89733C2.26403 1.52433 2.70698 1.23563 3.196 1.05133C3.66267 0.870664 4.196 0.746664 4.976 0.710664H4.97667ZM10.9633 2.03066C10.19 1.99533 9.958 1.988 8 1.988C6.042 1.988 5.81 1.99533 5.03667 2.03066C4.32133 2.06333 3.93333 2.18266 3.67467 2.28333C3.33267 2.41666 3.088 2.57466 2.83133 2.83133C2.58803 3.06803 2.40079 3.35619 2.28333 3.67466C2.18267 3.93333 2.06333 4.32133 2.03067 5.03666C1.99533 5.81 1.988 6.042 1.988 8C1.988 9.958 1.99533 10.19 2.03067 10.9633C2.06333 11.6787 2.18267 12.0667 2.28333 12.3253C2.40067 12.6433 2.588 12.932 2.83133 13.1687C3.068 13.412 3.35667 13.5993 3.67467 13.7167C3.93333 13.8173 4.32133 13.9367 5.03667 13.9693C5.81 14.0047 6.04133 14.012 8 14.012C9.95867 14.012 10.19 14.0047 10.9633 13.9693C11.6787 13.9367 12.0667 13.8173 12.3253 13.7167C12.6673 13.5833 12.912 13.4253 13.1687 13.1687C13.412 12.932 13.5993 12.6433 13.7167 12.3253C13.8173 12.0667 13.9367 11.6787 13.9693 10.9633C14.0047 10.19 14.012 9.958 14.012 8C14.012 6.042 14.0047 5.81 13.9693 5.03666C13.9367 4.32133 13.8173 3.93333 13.7167 3.67466C13.5833 3.33266 13.4253 3.088 13.1687 2.83133C12.932 2.58804 12.6438 2.4008 12.3253 2.28333C12.0667 2.18266 11.6787 2.06333 10.9633 2.03066ZM7.06333 10.2607C7.58644 10.4784 8.16892 10.5078 8.71129 10.3438C9.25365 10.1798 9.72226 9.83261 10.0371 9.36149C10.3519 8.89038 10.4934 8.32458 10.4374 7.76073C10.3814 7.19689 10.1313 6.66998 9.73 6.27C9.47416 6.01431 9.16481 5.81854 8.82422 5.69676C8.48364 5.57499 8.12029 5.53024 7.76033 5.56574C7.40038 5.60124 7.05277 5.71611 6.74254 5.90208C6.4323 6.08805 6.16716 6.34049 5.9662 6.64123C5.76524 6.94197 5.63346 7.28352 5.58034 7.6413C5.52723 7.99909 5.5541 8.36419 5.65903 8.71034C5.76395 9.05649 5.94432 9.37507 6.18715 9.64314C6.42997 9.91122 6.72922 10.1221 7.06333 10.2607ZM5.33467 5.33466C5.68468 4.98465 6.10021 4.707 6.55753 4.51757C7.01485 4.32814 7.505 4.23065 8 4.23065C8.495 4.23065 8.98515 4.32814 9.44247 4.51757C9.89979 4.707 10.3153 4.98465 10.6653 5.33466C11.0154 5.68468 11.293 6.10021 11.4824 6.55753C11.6719 7.01485 11.7694 7.505 11.7694 8C11.7694 8.495 11.6719 8.98515 11.4824 9.44246C11.293 9.89978 11.0154 10.3153 10.6653 10.6653C9.95844 11.3722 8.99969 11.7693 8 11.7693C7.00031 11.7693 6.04156 11.3722 5.33467 10.6653C4.62778 9.95844 4.23065 8.99969 4.23065 8C4.23065 7.0003 4.62778 6.04155 5.33467 5.33466ZM12.6053 4.792C12.6921 4.71018 12.7615 4.61178 12.8095 4.50265C12.8576 4.39351 12.8832 4.27584 12.8849 4.15662C12.8867 4.03739 12.8645 3.91903 12.8197 3.80854C12.7748 3.69805 12.7083 3.59767 12.624 3.51336C12.5397 3.42904 12.4393 3.3625 12.3288 3.31768C12.2183 3.27285 12.0999 3.25065 11.9807 3.25239C11.8615 3.25412 11.7438 3.27977 11.6347 3.32779C11.5255 3.37582 11.4272 3.44526 11.3453 3.532C11.1862 3.70068 11.0991 3.92474 11.1025 4.15662C11.1058 4.38849 11.1995 4.60992 11.3634 4.77389C11.5274 4.93787 11.7488 5.03148 11.9807 5.03486C12.2126 5.03824 12.4366 4.95112 12.6053 4.792Z"/>
+                        </svg>
+                        jimifrancesco
+                    </a>
+                    <a href="https://www.linkedin.com/in/francesco-gimignano-51884314a" target="_blank" title="LinkedIn">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.666664 1.892C0.666664 1.56702 0.795762 1.25535 1.02556 1.02556C1.25535 0.795763 1.56702 0.666666 1.892 0.666666H14.1067C14.2677 0.666403 14.4272 0.697908 14.5761 0.759377C14.725 0.820846 14.8602 0.911072 14.9742 1.02489C15.0881 1.13871 15.1785 1.27388 15.2401 1.42267C15.3017 1.57146 15.3334 1.73095 15.3333 1.892V14.1067C15.3335 14.2677 15.3019 14.4273 15.2404 14.5761C15.1788 14.725 15.0885 14.8603 14.9747 14.9742C14.8608 15.0881 14.7256 15.1785 14.5768 15.2401C14.4279 15.3017 14.2684 15.3334 14.1073 15.3333H1.892C1.73103 15.3333 1.57164 15.3016 1.42293 15.24C1.27422 15.1784 1.13911 15.0881 1.02532 14.9742C0.911529 14.8604 0.821285 14.7252 0.759746 14.5765C0.698206 14.4277 0.666577 14.2683 0.666664 14.1073V1.892ZM6.472 6.25867H8.458V7.256C8.74467 6.68267 9.478 6.16667 10.58 6.16667C12.6927 6.16667 13.1933 7.30867 13.1933 9.404V13.2853H11.0553V9.88133C11.0553 8.688 10.7687 8.01467 10.0407 8.01467C9.03067 8.01467 8.61067 8.74067 8.61067 9.88133V13.2853H6.472V6.25867ZM2.80533 13.194H4.944V6.16667H2.80533V13.1933V13.194ZM5.25 3.87467C5.25403 4.05778 5.22145 4.23986 5.15416 4.41021C5.08687 4.58056 4.98623 4.73576 4.85815 4.86669C4.73007 4.99762 4.57713 5.10165 4.4083 5.17267C4.23947 5.24369 4.05816 5.28028 3.875 5.28028C3.69184 5.28028 3.51052 5.24369 3.34169 5.17267C3.17287 5.10165 3.01992 4.99762 2.89184 4.86669C2.76376 4.73576 2.66313 4.58056 2.59584 4.41021C2.52855 4.23986 2.49597 4.05778 2.5 3.87467C2.50791 3.51524 2.65625 3.17319 2.91325 2.92179C3.17026 2.67039 3.51548 2.52961 3.875 2.52961C4.23452 2.52961 4.57974 2.67039 4.83674 2.92179C5.09374 3.17319 5.24208 3.51524 5.25 3.87467Z"/>
+                        </svg>
+                        Francesco.Gimignano
+                    </a>
+                    <a href="http://discordapp.com/users/155469699109486592" target="_blank" title="Discord">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.482 0C14.4195 0 15.1745 0.758 15.219 1.651V16L13.435 14.4845L12.456 13.594L11.3855 12.6615L11.831 14.1305H2.47399C1.53899 14.1305 0.781494 13.422 0.781494 12.4795V1.654C0.781494 0.761 1.53949 0.003 2.47699 0.003H13.477L13.482 0ZM9.40349 3.789H9.38249L9.24699 3.922C10.63 4.323 11.299 4.948 11.299 4.948C10.4085 4.5025 9.60349 4.2785 8.80149 4.1875C8.22349 4.099 7.64249 4.146 7.15299 4.1875H7.01749C6.70499 4.1875 6.03849 4.323 5.14499 4.6795C4.83499 4.815 4.65549 4.9035 4.65549 4.9035C4.65549 4.9035 5.32199 4.234 6.79599 3.8775L6.70499 3.789C6.70499 3.789 5.59049 3.7445 4.38749 4.6355C4.38749 4.6355 3.18449 6.732 3.18449 9.315C3.18449 9.315 3.85099 10.474 5.67949 10.518C5.67949 10.518 5.94749 10.164 6.21599 9.8515C5.18999 9.539 4.78899 8.914 4.78899 8.914C4.78899 8.914 4.87999 8.9585 5.01299 9.047H5.05199C5.07299 9.047 5.08349 9.0575 5.09349 9.068V9.073C5.10399 9.0835 5.11449 9.091 5.13249 9.091C5.35399 9.182 5.57249 9.2705 5.75249 9.359C6.06499 9.492 6.46349 9.627 6.95299 9.716C7.57299 9.807 8.28349 9.849 9.09349 9.716C9.49199 9.625 9.89299 9.539 10.294 9.359C10.552 9.226 10.872 9.0935 11.2235 8.867C11.2235 8.867 10.825 9.492 9.75449 9.8045C9.97349 10.1145 10.283 10.471 10.283 10.471C12.1135 10.4295 12.8245 9.2705 12.8635 9.32C12.8635 6.7395 11.6525 4.6405 11.6525 4.6405C10.564 3.8305 9.54299 3.7995 9.36349 3.7995L9.39999 3.7865L9.40349 3.789ZM9.51549 6.732C9.98449 6.732 10.362 7.1305 10.362 7.62C10.362 8.115 9.98199 8.513 9.51549 8.513C9.04649 8.513 8.66899 8.1145 8.66899 7.625C8.66899 7.13 9.04899 6.732 9.51549 6.732ZM6.48699 6.732C6.95299 6.732 7.33099 7.1305 7.33099 7.62C7.33099 8.115 6.95099 8.513 6.48449 8.513C6.01549 8.513 5.63549 8.1145 5.63549 7.625C5.63549 7.13 6.01549 6.732 6.48449 6.732H6.48699Z"/>
+                        </svg>
+                        JimiIT92#5592
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>Designed by <strong>Jimi</strong></span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,718 @@
+/* #region Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--clr-white);
+    background-image: url("../img/bg.webp");
+    background-color: var(--clr-black);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #endregion */
+
+/* #region Navbar */
+
+.navbar {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: clamp(1em, 10vw, 10em);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    color: var(--clr-white);
+    transition: all .5s;
+}
+
+.navbar[data-nav-sticky="true"] {
+    padding-inline: clamp(.75em, 9vw, 9em);
+    background-color: var(--clr-white);
+    box-shadow: 0 0 .75em var(--clr-black);
+}
+
+.navbar[data-nav-sticky="true"] .logo {
+    font-size: clamp(1.25rem, 9vw, 4rem);
+}
+
+.navbar[data-nav-sticky="true"] .logo a {
+    color: var(--clr-title);
+}
+
+.nav__btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.logo {
+    font-family: var(--ff-title);
+    font-size: clamp(1.5rem, 10vw, 8.5rem);
+    transition: all .5s;
+}
+
+.logo a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+nav {
+    visibility: hidden;
+}
+
+[data-nav-sticky="true"] nav,
+nav > [data-visible="true"] {
+    visibility: visible;
+}
+
+.nav__links {
+    display: inline-flex;
+    gap: 2em;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+.nav__link {
+    position: relative;
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav__link::after {
+    content: '';
+    background-color: var(--clr-accent);
+    display: inline-flex;
+    position: absolute;
+    z-index: -1;
+    bottom: 25%;
+    left: 0;
+    width: 0;
+    height: .25rem;
+    transition: width .3s;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+    width: 100%;
+}
+
+[data-nav-sticky="true"] .nav__link,
+[data-visible="true"] .nav__link  {
+    color: var(--clr-title);
+}
+
+/* #endregion */
+
+/* #region Header Content */
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.header__content h1,
+.header__content span {
+    font-size: clamp(1.5rem, 10vw, 10rem);
+}
+
+.header__title {
+    text-align: center;
+    display: inline-flex;
+}
+
+.header__socials {
+    display: inline-flex;
+    align-items: center;
+    gap: 3em;
+    transition: all .5s;
+}
+
+.header__socials svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--clr-white);
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.header__socials svg:hover {
+    transform: scale(1.25);
+    fill: var(--clr-accent);
+}
+
+.header__scroll {
+    margin-bottom: 2em;
+}
+
+.header__scroll svg {
+    width: 6em;
+    height: 6em;
+    fill: none;
+    stroke: var(--clr-white);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
+}
+
+.header__scroll svg path {
+    animation: fade-arrows 2.5s infinite;
+    -webkit-animation: fade-arrows 2.5s infinite; 
+}
+
+.header__scroll svg :first-child {
+    animation-delay:-.25s;
+    -webkit-animation-delay:-.25s;
+}
+  
+.header__scroll svg :last-child {
+    animation-delay:0s;
+    -webkit-animation-delay:0s;
+}
+
+@keyframes fade-arrows {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+}
+
+@-webkit-keyframes fade-arrows {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+}
+
+/* #endregion */
+
+/* #region About */
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.about__download {
+    position: relative;
+    color: var(--clr-title);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    transition: all .5s;
+    width: fit-content;
+}
+
+.hoverable::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    height: 25%;
+    width: 75%;
+    z-index: -1;
+    background-color: var(--clr-accent);
+    transition: all .5s;
+}
+
+.hoverable:hover::after {
+    height: 100%;
+    width: 100%;
+    transform-origin: 0 0;
+}
+
+img.profile {
+    max-width: 40%;
+    height: 100%;
+    border: none;
+    border-radius: .25em;
+    box-shadow: 0 0 .5em var(--clr-black);
+}
+
+/* #endregion */
+
+/* #region What I do */
+
+.skill__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill__detail svg {
+    --size: 10rem;
+    width: var(--size);
+    height: var(--size);
+    fill: none;
+    stroke-width: .25rem;
+    stroke: var(--clr-accent);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.skill__detail svg.fill {
+    fill: var(--clr-accent);
+    stroke: none;
+}
+
+.skill__detail svg.ticker {
+    stroke-width: 2rem;
+}
+
+.skill__detail svg.rock {
+    stroke-width: .15rem;
+}
+
+.skill__detail svg.boxing {
+    stroke-width: .1rem;
+}
+
+.skills:not(.interests) > * {
+    flex-basis: 100%;
+}
+
+h2.content__title.interests {
+    margin-top: 5rem;
+    font-size: clamp(1.75rem, 4vw, 4rem);
+}
+
+.interests {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.interests h3 {
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.interests .skill__detail {
+    align-items: center;
+}
+
+.interests .skill__detail svg {
+    --size: 7.5rem;
+}
+
+#what-i-do .skills > * {
+    transform: translateY(100%);
+    transition: transform .75s;
+}
+
+#what-i-do.active .skills > * {
+    transform: translateY(0%);
+}
+
+/* #endregion */
+
+/* #region My experience */
+
+#my-experience > .content {
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#my-experience .content__title {
+    margin-bottom: 0;
+}
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.experience__logo {
+    flex: 25%;
+    padding-block: 1.1em;
+}
+
+.experience__content {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    flex-grow: 1;
+}
+
+.experience__content > p {
+    margin-top: 1.5em;
+    max-width: 100ch;
+}
+
+.experience__content a:hover,
+.experience__content a:active {
+    color: var(--clr-accent);
+}
+
+.experience__title {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.experience__title p > mark {
+    font-size: clamp(.75rem, 1.5vw, 1.5rem);
+    background: var(--clr-accent);
+    color: var(--clr-black);
+    padding: .25rem;
+    font-weight: var(--fw-light);
+}
+
+/* #endregion */
+
+/* #region Contacts */
+
+#contacts .content {
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+
+.contact__form {
+    width: 70%;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact__form textarea {
+    resize: none;
+}
+
+.contact__form button {
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    transition: all .5s;
+    padding-inline: 0;
+}
+
+.contact__form button > span {
+    position: relative;
+    z-index: 1;
+}
+
+.contact__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact__socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    transition: all .5s;
+}
+
+.contact__socials a > svg {
+    width: 3em;
+    height: 3em;
+}
+
+.contact__socials a:hover {
+    color: var(--clr-accent);
+    fill: var(--clr-accent);
+}
+
+/* #endregion */
+
+/* #region Footer */
+
+footer {
+    text-align: center;
+    padding: 2em;
+}
+
+/* #endregion */
+
+/* #region General Styles */
+
+body {
+    font-family: var(--ff-text);
+}
+
+section {
+    margin-inline: min(20vw, 40rem);
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    padding-block: 5em;
+    padding-inline: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+section > * {
+    opacity: 0;
+    transition: opacity .75s;
+}
+
+section.active > * {
+    opacity: 1;
+}
+
+section h2 {
+    margin-bottom: 2.5rem;
+}
+
+section h3 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: var(--clr-title);
+    font-weight: var(--fw-bold);
+}
+
+section > .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    color: var(--clr-text);
+    height: 100%;
+    width: 100%;
+}
+
+.content h2,
+.content__title {
+    font-family: var(--ff-title);
+    color: var(--clr-title);
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1.2;
+}
+
+.content__title {
+    align-self: baseline;
+}
+
+.content a:not(.about__download) {
+    color: var(--clr-text);
+    font-weight: var(--fw-medium);
+}
+
+.content a:not(.about__download):hover,
+.content a:not(.about__download):active {
+    color: var(--clr-accent);
+}
+
+.content p,
+label {
+    font-size: clamp(1.15rem, 2vw, 2rem);
+    font-weight: var(--fw-light);
+    line-height: 1.1;
+    color: var(--clr-text);
+}
+
+label {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+section#what-i-do,
+section#contacts {
+    background-color: var(--clr-section-bg);
+}
+
+mark {
+    color: var(--clr-accent);
+    background-color: transparent;
+}
+
+svg {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+
+.experience__content > p {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+}
+
+/* #endregion */
+
+/* #region Mobile Fixes */
+
+@media (max-width: 60em) {
+
+    /* #region Navbar */
+
+    .nav__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        z-index: 9999;
+        width: 3em;
+        aspect-ratio: 1;
+        right: 2em;
+    }
+
+    .nav__btn span {
+        --clr-span: var(--clr-white);
+        width: 100%;
+        height: .25em;
+        border-radius: 1em;
+        border: 1px solid var(--clr-span);
+        background-color: var(--clr-span);
+        transition: .3s;
+    }
+
+    [data-nav-sticky="true"] .nav__btn span {
+        --clr-span: var(--clr-black);
+    }
+
+    .nav__btn[aria-expanded="true"] span {
+        position: absolute;
+        top: 50%;
+        border: 1px solid var(--clr-accent);
+        background-color: var(--clr-accent);
+    }
+
+    .nav__btn[aria-expanded="true"] :first-child {
+        transform: rotateZ(-45deg);
+    }
+
+    .nav__btn[aria-expanded="true"] :nth-child(2) {
+        transform: translateX(200%);
+    }
+
+    .nav__btn[aria-expanded="true"] :last-child {
+        transform: rotateZ(45deg);
+    }
+
+    .nav__links {
+        margin: 0;
+        z-index: 1000;
+        position: fixed;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        inset: 0 0 0 30%;
+        transform: translateY(100%);
+        transition: transform 350ms ease-out;
+        background-color: var(--clr-white);
+        width: 100%;
+        left: 0;
+        align-items: center;
+        gap: 4em;
+    }
+
+    .nav__links[data-visible="true"] {
+        transform: translateY(0);
+    }
+
+    [data-visible="true"] .nav__link {
+        font-size: 3rem;
+    }
+
+    /* #endregion */
+
+    /* #region About */
+
+    .about__content {
+        gap: 3rem;
+    }
+
+    img.profile {
+        max-width: 75%;
+        max-height: 75%;
+    }
+
+    /* #endregion */
+
+    /* #region What I do */
+
+    #what-i-do {
+        gap: 1.5rem;
+        padding-inline: 1rem;
+    }
+
+    .skill__detail {
+        padding-inline: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skill__detail svg {
+        --size: 5rem;
+    }
+
+    .interests .skill__detail svg {
+        --size: 3.5rem;
+    }
+
+    .skills + .skills {
+        margin-top: 1.5rem;
+    }
+
+    /* #endregion */
+
+    /* #region My experience */
+
+    #my-experience > .content {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    #my-experience .content__title.interests {
+        margin-top: 2rem;
+    }
+
+    .experience__logo {
+        display: none;
+    }
+
+    /* #endregion */
+
+    /* #region General Styles */
+
+    section {
+        margin-inline: 1em;
+    }
+
+    section > .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* #endregion */
+}
+
+/* #endregion */

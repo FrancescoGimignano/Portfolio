@@ -11,4 +11,5 @@
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+    --fs-large: clamp(1.5rem, 7vw, 7rem);
 }
