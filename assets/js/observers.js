@@ -1,62 +1,17 @@
-/**
- * Get all the sections
- */
-const sections = document.querySelectorAll("section");
-/**
- * Get the Header section, where the Navbar isn't visible
- */
+// Get the Header section, to show/hide the Navbar
 const header = document.querySelector("header");
-/**
- * Get the Navbar parent Div
- */
-const navBarContainer = document.querySelector(".navbar");
-/**
- * Get the Navbar container
- */
+// Get the Navbar container
+const navBarContainer = document.querySelector("[data-element='navbar']");
+// Get the Navbar
 const navBar = document.querySelector("nav");
-/**
- * Get the mobile Navbar button
- */
-const navBtn = document.querySelector(".nav__btn");
-/**
- * Get the Navbar items
- */
-const navLinks = document.querySelector(".nav__links");
+// Get the mobile Navbar button
+const navBarButton = document.querySelector("[data-button='nav']");
+// Get the Navbar menu
+const navBarMenu = document.getElementById("primary-navigation");
+// Get the sections
+const sections = document.querySelectorAll("section");
 
-/**
- * Set the click listener for the mobile Navbar button
- */
-navBtn.addEventListener("click", () => {
-  if (navLinks.getAttribute("data-visible") === "false") {
-    setVisible(true);
-  } else {
-    setVisible(false);
-  }
-});
-
-/**
- * Close the Navbar on mobile if the user clicks on it
- */
-navLinks.addEventListener("click", () => {
-  setVisible(false);
-});
-
-/**
- * Close the Navbar on mobile if the window is resized
- */
-window.addEventListener("resize", () => {
-  setVisible(false);
-});
-
-/**
- * Set the Navbar visibility
- *
- * @param visible Navbar visibility
- */
-function setVisible(visible) {
-  navLinks.setAttribute("data-visible", visible);
-  navBtn.setAttribute("aria-expanded", visible);
-}
+// #region Navbar
 
 /**
  * Set the Navbar "sticky" when scrolling down from, or hide it if the user is fully in the Home Page
@@ -65,11 +20,52 @@ const headerObserver = new IntersectionObserver(
   (entries) =>
     entries.forEach((entry) => {
       navBarContainer.setAttribute("data-nav-sticky", !entry.isIntersecting);
+      if(entry.isIntersecting) {
+        setVisible(false);
+      }
     }),
-  {
-    threshold: 1,
-  }
+  { threshold: 1 }
 );
+
+/**
+ * Set the click listener for the mobile Navbar button
+ */
+navBarButton.addEventListener("click", () => {
+  setVisible(navBarMenu.getAttribute("data-visible") === "false");
+});
+
+/**
+ * Close the Navbar on mobile if the user clicks on it
+ */
+navBarMenu.addEventListener("click", () => {
+  setVisible(false);
+});
+
+/**
+ * Close the Navbar menu on mobile if the window is resized
+ */
+window.addEventListener("resize", () => {
+  setVisible(false);
+});
+
+/**
+ * Set the Navbar menu visibility
+ *
+ * @param visible Navbar menu visibility
+ */
+function setVisible(visible) {
+  navBarMenu.setAttribute("data-visible", visible);
+  navBarButton.setAttribute("aria-expanded", visible);
+}
+
+/**
+ * Observe the Header
+ */
+headerObserver.observe(header);
+
+//#endregion
+
+// #region Sections
 
 /**
  * Trigger animations when a section is being displayed for the first time
@@ -84,31 +80,32 @@ const firstActivationObserver = new IntersectionObserver(
         sectionObserver.unobserve(target);
       });
   },
-  {
-    threshold: 0.25,
-  }
+  { threshold: 0.25 }
 );
 
-const sectionObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    let navLink = navLinks.querySelector(`li a[href='#${entry.target.id}']`);
-    if(navLink) {
-      navLink.classList.toggle("active", entry.isIntersecting);
-    }
-  });
-}, {
-  threshold: 0.25
-});
-
 /**
- * Observe the Header
+ * Se the section Navbar link active
  */
-headerObserver.observe(header);
+const sectionNavbarObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      let navLink = navBarMenu.querySelector(
+        `li a[href='#${entry.target.id}']`
+      );
+      if (navLink) {
+        navLink.classList.toggle("active", entry.isIntersecting);
+      }
+    });
+  },
+  { threshold: 0.25 }
+);
 
 /**
  * Observe the sections
  */
 sections.forEach((section) => {
   firstActivationObserver.observe(section);
-  sectionObserver.observe(section)
+  sectionNavbarObserver.observe(section);
 });
+
+// #endregion

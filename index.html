@@ -46,6 +46,30 @@
 </head>
 <body>
     <header class="[ flex column nowrap align-center justify-center ] [ cover-bg text-white ] [ landscape ]">
+        <div class="[ inline-flex justify-space-between align-center ] [ text-white ] [ full-width fixed-top above-everything ]" data-nav-sticky="false" data-element="navbar">
+            <div class="[ title text-white font-large ]" data-section="logo">
+                <a href="#" title="HomePage">Jimi</a>
+            </div>
+            <button type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu" data-button="nav">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="[ inline-flex ] [ uppercase text-title ]" id="primary-navigation" data-visible="false" data-gap="2">
+                    <li>
+                        <a class="underlined" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="underlined" href="#what-i-do">What I do</a>
+                    </li>
+                    <li>
+                        <a class="underlined" href="#my-experience">My experience</a>
+                    </li>
+                    <li>
+                        <a class="underlined" href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="[ flex column align-center justify-center grow ] [ full-width ]" data-gap="3">
             <div class="[ inline-flex text-center ] [ font-large ]" data-min-height="large">
                 <div id="title-values">
@@ -112,7 +136,12 @@
             </a>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section id="about"></section>
+        <section id="what-i-do"></section>
+        <section id="my-experience"></section>
+        <section id="contacts"></section>
+    </main>
     <footer class="text-center">
         <span>Designed by <strong>Jimi</strong></span>
     </footer>
