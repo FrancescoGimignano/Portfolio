@@ -208,6 +208,10 @@ mark {
     transform: translateX(0);
 }
 
+.bg-404 {
+    background-color: var(--clr-title);
+}
+
 .cover-bg {
     background-image: url("../img/bg.webp");
     background-color: var(--clr-black);
@@ -358,6 +362,10 @@ img[data-max-size="75"] {
 
 [data-padding="5"] {
     padding-block: 5em;
+}
+
+[data-padding-inline="5"] {
+    padding-inline: 5em;
 }
 
 [data-min-height="large"] {
