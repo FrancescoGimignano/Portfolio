@@ -23,6 +23,7 @@ The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with 
 fonts.google.com/specimen/Kaushan+Script).
 
 Brand Icons SVG code provided by [Simple Icons](https://simpleicons.org/).
+
 Interests Icons SVG code provided by [SVG Repo](https://www.svgrepo.com/).
 
 The _"about me"_ picture was taken by [Marinella Parente](https://www.instagram.com/marinella_art/), a really talented artist which I've the pleasure to be friend with 👩🏼‍🎨
