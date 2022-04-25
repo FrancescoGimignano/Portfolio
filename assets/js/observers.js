@@ -12,6 +12,8 @@ const navBarMenu = document.getElementById("primary-navigation");
 const sections = document.querySelectorAll("section");
 // Get all the popups
 const popups = document.querySelectorAll(".pop-up");
+// Get all the sliders
+const sliders = document.querySelectorAll(".slide");
 
 // #region Navbar
 
@@ -22,7 +24,7 @@ const headerObserver = new IntersectionObserver(
   (entries) =>
     entries.forEach((entry) => {
       navBarContainer.setAttribute("data-nav-sticky", !entry.isIntersecting);
-      if(entry.isIntersecting) {
+      if (entry.isIntersecting) {
         setVisible(false);
       }
     }),
@@ -88,14 +90,30 @@ const firstActivationObserver = new IntersectionObserver(
 /**
  * Trigger pop up when the element is being displayed for the first time
  */
- const popUpActivationObserver = new IntersectionObserver(
-  (entries, sectionObserver) => {
+const popUpActivationObserver = new IntersectionObserver(
+  (entries, popUpActivationObserver) => {
     entries
       .filter((entry) => entry.isIntersecting)
       .forEach((entry) => {
         let target = entry.target;
         target.classList.add("popped");
-        sectionObserver.unobserve(target);
+        popUpActivationObserver.unobserve(target);
+      });
+  },
+  { threshold: 0.1 }
+);
+
+/**
+ * Trigger slide when the element is being displayed for the first time
+ */
+const slideActivationObserver = new IntersectionObserver(
+  (entries, slideActivationObserver) => {
+    entries
+      .filter((entry) => entry.isIntersecting)
+      .forEach((entry) => {
+        let target = entry.target;
+        target.classList.add("slided");
+        slideActivationObserver.unobserve(target);
       });
   },
   { threshold: 0.1 }
@@ -107,19 +125,21 @@ const firstActivationObserver = new IntersectionObserver(
 const sectionNavbarObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      let navLink = navBarMenu.querySelector(`li a[href='#${entry.target.id}']`);
+      let navLink = navBarMenu.querySelector(
+        `li a[href='#${entry.target.id}']`
+      );
       if (navLink) {
         navLink.classList.toggle("active", entry.isIntersecting);
       }
     });
   },
-  { threshold: 0.25 }
+  { rootMargin: "100px 0px 100px 0px", threshold: 0.65 }
 );
 
 /**
  * Observe the sections
  */
-sections.forEach(section => {
+sections.forEach((section) => {
   firstActivationObserver.observe(section);
   sectionNavbarObserver.observe(section);
 });
@@ -127,6 +147,11 @@ sections.forEach(section => {
 /**
  * Observe the popups
  */
- popups.forEach(popUp => popUpActivationObserver.observe(popUp));
+popups.forEach(popUp => popUpActivationObserver.observe(popUp));
+
+/**
+ * Observe the sliders
+ */
+sliders.forEach(slide => slideActivationObserver.observe(slide));
 
 // #endregion
