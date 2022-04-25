@@ -19,8 +19,7 @@ The layout for this portfolio has been heavinly ispired by the [Hendrix Theme fr
 
 The landing page animation has been made using [Typed.JS](https://github.com/mattboldt/typed.js/).
 
-The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with different font weights, and [Kaushan Script](https://
-fonts.google.com/specimen/Kaushan+Script).
+The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with different font weights, and [Kaushan Script](https://fonts.google.com/specimen/Kaushan+Script).
 
 Brand Icons SVG code provided by [Simple Icons](https://simpleicons.org/).
 
