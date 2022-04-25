@@ -10,6 +10,8 @@ const navBarButton = document.querySelector("[data-button='nav']");
 const navBarMenu = document.getElementById("primary-navigation");
 // Get the sections
 const sections = document.querySelectorAll("section");
+// Get all the popups
+const popups = document.querySelectorAll(".pop-up");
 
 // #region Navbar
 
@@ -84,6 +86,22 @@ const firstActivationObserver = new IntersectionObserver(
 );
 
 /**
+ * Trigger pop up when the element is being displayed for the first time
+ */
+ const popUpActivationObserver = new IntersectionObserver(
+  (entries, sectionObserver) => {
+    entries
+      .filter((entry) => entry.isIntersecting)
+      .forEach((entry) => {
+        let target = entry.target;
+        target.classList.add("popped");
+        sectionObserver.unobserve(target);
+      });
+  },
+  { threshold: 0.25 }
+);
+
+/**
  * Se the section Navbar link active
  */
 const sectionNavbarObserver = new IntersectionObserver(
@@ -103,9 +121,14 @@ const sectionNavbarObserver = new IntersectionObserver(
 /**
  * Observe the sections
  */
-sections.forEach((section) => {
+sections.forEach(section => {
   firstActivationObserver.observe(section);
   sectionNavbarObserver.observe(section);
 });
+
+/**
+ * Observe the popups
+ */
+ popups.forEach(popUp => popUpActivationObserver.observe(popUp));
 
 // #endregion

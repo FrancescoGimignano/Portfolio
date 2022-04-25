@@ -31,7 +31,7 @@ main > :nth-child(even) {
 }
 
 section > div {
-    margin-inline: min(20vw, 40rem);
+    margin-inline: min(15vw, 40rem);
 }
 
 section > *,
@@ -91,6 +91,10 @@ section.active > * > * {
 
 .overflow-visible {
     overflow: visible;
+}
+
+.margin-auto {
+    margin: auto;
 }
 
 .stroke {
@@ -153,6 +157,17 @@ section.active > * > * {
 .section-subtitle {
     font-size: var(--fs-subtitle);
     line-height: 1.2;
+}
+
+.pop-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity,transform .35s;
+}
+
+.pop-up.popped {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* #endregion */
@@ -249,6 +264,11 @@ section.active > * > * {
 
 /* #region Exception */
 
+img[data-max-size="75"] {
+    max-width: 75%;
+    max-height: 75%;
+}
+
 [data-gap="1"] {
     gap: 1em;
 }
@@ -262,7 +282,7 @@ section.active > * > * {
 }
 
 [data-padding="3"] {
-    padding: 3em;
+    padding-block: 3em;
 }
 
 [data-min-height="large"] {
@@ -429,6 +449,14 @@ button[data-button="nav"][aria-expanded="true"] :last-child {
 
     #about > :first-child {
         flex-direction: column;
+    }
+
+    #interests {
+        flex-direction: column;
+    }
+
+    #interests .img-scaled {
+        --img-size: 4em;
     }
 }
 
