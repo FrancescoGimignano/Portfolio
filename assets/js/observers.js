@@ -107,15 +107,13 @@ const firstActivationObserver = new IntersectionObserver(
 const sectionNavbarObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      let navLink = navBarMenu.querySelector(
-        `li a[href='#${entry.target.id}']`
-      );
+      let navLink = navBarMenu.querySelector(`li a[href='#${entry.target.id}']`);
       if (navLink) {
         navLink.classList.toggle("active", entry.isIntersecting);
       }
     });
   },
-  { threshold: 0.35 }
+  { threshold: 0.25 }
 );
 
 /**

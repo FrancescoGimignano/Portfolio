@@ -12,10 +12,11 @@
     --fw-medium: 500;
     --fw-bold: 700;
     --fs-large: clamp(1.5rem, 7vw, 7rem);
-    --fs-title: clamp(2rem, 4vw, 4rem);
-    --fs-subtitle: clamp(1.5rem, 3vw, 3rem);
+    --fs-title: clamp(2.5rem, 4.25vw, 4.25rem);
+    --fs-subtitle: clamp(2rem, 3.5vw, 3.5rem);
     --fs-logo-sticky: clamp(1.25rem, 5vw, 5rem);
     --fs-content: clamp(1.25rem, 2vw, 1.5rem);
     --fs-work-role: clamp(1rem, 2.5vw, 2.5rem);
-    --fs-small: clamp(.75rem, 1.5vw, 1.5rem);
+    --fs-small: clamp(.75rem, 1vw, 1rem);
+    --fs-disclaimer: clamp(1.5rem, 2vw, 2rem);
 }
