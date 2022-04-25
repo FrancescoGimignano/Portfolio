@@ -22,7 +22,8 @@ The landing page animation has been made using [Typed.JS](https://github.com/mat
 The fonts I used are [Poppins](https://fonts.google.com/specimen/Poppins), with different font weights, and [Kaushan Script](https://
 fonts.google.com/specimen/Kaushan+Script).
 
-Icons SVG code provided by [Iconify](https://iconify.design/).
+Brand Icons SVG code provided by [Simple Icons](https://simpleicons.org/).
+Interests Icons SVG code provided by [SVG Repo](https://www.svgrepo.com/).
 
 The _"about me"_ picture was taken by [Marinella Parente](https://www.instagram.com/marinella_art/), a really talented artist which I've the pleasure to be friend with 👩🏼‍🎨
 

@@ -4,7 +4,7 @@
     --clr-title: hsl(0, 0%, 16%);
     --clr-text: hsl(0, 2%, 35%);
     --clr-accent: hsl(11, 63%, 67%);
-    --clr-section-bg: hsl(0, 0%, 98%);
+    --clr-section-bg: hsl(0, 0%, 95%);
     --ff-title: 'Kaushan Script', cursive;
     --ff-text: 'Poppins', sans-serif;
     --fw-light: 300;
@@ -12,5 +12,8 @@
     --fw-medium: 500;
     --fw-bold: 700;
     --fs-large: clamp(1.5rem, 7vw, 7rem);
+    --fs-title: clamp(2rem, 4vw, 4rem);
+    --fs-subtitle: clamp(1.5rem, 3vw, 3rem);
     --fs-logo-sticky: clamp(1.25rem, 5vw, 5rem);
+    --fs-content: clamp(1.25rem, 2vw, 1.5rem);
 }

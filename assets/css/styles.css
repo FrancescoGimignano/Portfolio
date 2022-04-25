@@ -22,6 +22,29 @@ button {
     background-color: transparent;
 }
 
+main {
+    background-color: var(--clr-white);
+}
+
+main > :nth-child(even) {
+    background-color: var(--clr-section-bg);
+}
+
+section > div {
+    margin-inline: min(20vw, 40rem);
+}
+
+section > *,
+section > * > * {
+    opacity: 0;
+    transition: opacity .75s;
+}
+
+section.active > *,
+section.active > * > * {
+    opacity: 1;
+}
+
 /* #endregion */
 
 /* #region Composition */
@@ -77,7 +100,7 @@ button {
 
 #primary-navigation > * > a {
     position: relative;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .underlined::after {
@@ -93,8 +116,43 @@ button {
 }
 
 .underlined:hover::after,
-.underlined:active::after {
+.underlined.active::after {
     width: 100%;
+}
+
+.hoverable {
+    position: relative;
+    width: fit-content;
+    z-index: 0;
+    transition: all .5s;
+}
+
+.hoverable::after {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 75%;
+    height: 25%;
+    content: '';
+    z-index: -1;
+    background-color: var(--clr-accent);
+    transition: all .5s;
+}
+
+.hoverable:hover::after {
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0;
+}
+
+.section-title {
+    font-size: var(--fs-title);
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: var(--fs-subtitle);
+    line-height: 1.2;
 }
 
 /* #endregion */
@@ -121,8 +179,18 @@ button {
     color: var(--clr-title);
 }
 
+.text-content,
+.text-content > *,
+.text-content > * > a {
+    color: var(--clr-text);
+}
+
 .font-large {
     font-size: var(--fs-large);
+}
+
+.font-content {
+    font-size: var(--fs-content);
 }
 
 .img-scaled {
@@ -171,9 +239,19 @@ button {
     z-index: 9999;
 }
 
+.border-shadow {
+    border: none;
+    border-radius: .25em;
+    box-shadow: 0 0 .5em var(--clr-black);
+}
+
 /* #endregion */
 
 /* #region Exception */
+
+[data-gap="1"] {
+    gap: 1em;
+}
 
 [data-gap="2"] {
     gap: 2em;
@@ -181,6 +259,10 @@ button {
 
 [data-gap="3"] {
     gap: 3em;
+}
+
+[data-padding="3"] {
+    padding: 3em;
 }
 
 [data-min-height="large"] {
@@ -343,6 +425,10 @@ button[data-button="nav"][aria-expanded="true"] :last-child {
     #primary-navigation[data-visible="true"] > *,
     #primary-navigation[data-visible="true"] > * > * {
         font-size: 3rem;
+    }
+
+    #about > :first-child {
+        flex-direction: column;
     }
 }
 
