@@ -82,7 +82,7 @@ const firstActivationObserver = new IntersectionObserver(
         sectionObserver.unobserve(target);
       });
   },
-  { threshold: 0.25 }
+  { threshold: 0.15 }
 );
 
 /**
@@ -115,7 +115,7 @@ const sectionNavbarObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.25 }
+  { threshold: 0.35 }
 );
 
 /**
