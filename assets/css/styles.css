@@ -49,6 +49,10 @@ section.active > * > * {
 
 /* #region Composition */
 
+.grid {
+    display: grid;
+}
+
 .flex {
     display: flex;
 }
@@ -264,6 +268,10 @@ section.active > * > * {
 
 /* #region Exception */
 
+[data-grid-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 img[data-max-size="75"] {
     max-width: 75%;
     max-height: 75%;
@@ -457,6 +465,15 @@ button[data-button="nav"][aria-expanded="true"] :last-child {
 
     #interests .img-scaled {
         --img-size: 4em;
+    }
+
+    #skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skills > div {
+        align-items: center;
     }
 }
 

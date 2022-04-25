@@ -98,7 +98,7 @@ const firstActivationObserver = new IntersectionObserver(
         sectionObserver.unobserve(target);
       });
   },
-  { threshold: 0.25 }
+  { threshold: 0.1 }
 );
 
 /**
