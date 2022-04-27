@@ -15,7 +15,7 @@
     --fs-title: clamp(2.5rem, 4.25vw, 4.25rem);
     --fs-subtitle: clamp(2rem, 3.5vw, 3.5rem);
     --fs-logo-sticky: clamp(1.25rem, 5vw, 5rem);
-    --fs-content: clamp(1.25rem, 2vw, 1.5rem);
+    --fs-content: clamp(1rem, 2vw, 1.5rem);
     --fs-work-role: clamp(1rem, 2.5vw, 2.5rem);
     --fs-small: clamp(.75rem, 1vw, 1rem);
     --fs-disclaimer: clamp(1.5rem, 2vw, 2rem);

@@ -587,7 +587,7 @@ button[data-button="nav"][aria-expanded="true"] :last-child {
 
     [data-section="contacts"] {
         flex-direction: column;
-        gap: 1em;
+        align-items: center;
     }
 }
 
